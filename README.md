@@ -17,7 +17,7 @@
 
 ### 🔧 Clone the repository
 In order to clone the project repository run: <br/>
-`git clone https://github.com/bttobi/event_scheduler.git`
+`git clone https://github.com/bttobi/QuizZapp.git`
 
 #
 
