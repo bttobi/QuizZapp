@@ -1,7 +1,5 @@
 # ❓ QuizZapp
 
-# ✏️ Event scheduler
-
 ### 🧰 Technologies and tools used
 <img align="top" padding="5px" width="30px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" /> HTML5 <br/>         
 <img align="top" padding="5px" width="30px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" /> CSS3 <br/>  
