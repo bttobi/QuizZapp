@@ -11,7 +11,7 @@
 <img align="top" padding="5px" width="30px" src="https://global.discourse-cdn.com/standard17/uploads/threejs/original/2X/e/e4f86d2200d2d35c30f7b1494e96b9595ebc2751.png" /> React Three Fiber with drei <br/>  
 <img align="top" padding="5px" width="80px" src="https://raw.githubusercontent.com/saadeghi/files/main/daisyui/logo-4.svg" /> <br/><br/>
 <img align="top" padding="5px" width="50px" src="https://reactrouter.com/_brand/react-router-stacked-color-inverted.png" /> React Router <br/><br/>
-<img align="top" padding="5px" width="20px" src="https://cdn.worldvectorlogo.com/logos/firebase-1.svg" /> Firebase <br/>
+<img align="top" padding="5px" width="20px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original-wordmark.svg" /> PostgreSQL <br/>
 
 #
 
