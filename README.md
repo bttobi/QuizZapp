@@ -12,6 +12,7 @@
 <img align="top" padding="5px" width="80px" src="https://raw.githubusercontent.com/saadeghi/files/main/daisyui/logo-4.svg" /> <br/><br/>
 <img align="top" padding="5px" width="50px" src="https://reactrouter.com/_brand/react-router-stacked-color-inverted.png" /> React Router <br/><br/>
 <img align="top" padding="5px" width="50px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original-wordmark.svg" /> PostgreSQL <br/>
+<img align="top" padding="5px" width="50px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg" /> NodeJS <br/>
 
 #
 
