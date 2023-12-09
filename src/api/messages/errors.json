@@ -1,0 +1,7 @@
+{
+  "EMAIL_ALR_IN_USE": "Email already in use",
+  "INCORRECT_PASSWORD": "Incorrect password",
+  "USER_DOES_NOT_EXIST": "This user does not exist",
+  "GENERAL_ERROR": "Error happened, try again later",
+  "SIGNOUT_ERROR": "Error while signing out, try again later"
+}
