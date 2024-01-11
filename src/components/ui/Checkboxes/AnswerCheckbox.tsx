@@ -1,7 +1,6 @@
 import React from 'react';
 import './AnswerCheckbox.css';
 import { motion } from 'framer-motion';
-import { FaQuestionCircle } from 'react-icons/fa';
 
 interface AnswerCheckboxProps {
   index: number;

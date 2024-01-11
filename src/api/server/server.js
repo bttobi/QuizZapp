@@ -67,7 +67,15 @@ app.get(
 );
 
 app.post(
-  '/results/:quizID',
+  '/answers/:quizID',
+  passport.authenticate('jwt', { session: false }),
+  (req, res, next) => {
+    quizService.postAnswers(req, res, next);
+  }
+);
+
+app.get(
+  '/results/:userEmail/:quizID',
   passport.authenticate('jwt', { session: false }),
   (req, res, next) => {
     quizService.getResults(req, res, next);

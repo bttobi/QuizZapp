@@ -19,8 +19,8 @@ import useUser from '../../hooks/useUser';
 
 export const useGetUser = () => {
   const { data: userData, refetch } = useQuery({
-    queryKey: ['user'],
     queryFn: async () => await axios.get(getUserRoute()).then(res => res.data),
+    queryKey: ['user'],
     enabled: false,
   });
   return { userData, refetch };

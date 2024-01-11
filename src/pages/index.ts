@@ -6,7 +6,7 @@ import SignInPage from './SignInPage';
 import SignUpPage from './SignUpPage';
 import ProfilePage from './ProfilePage';
 import QuizPage from './QuizPage';
-import ResultsPage from './ResultsPage';
+import ResultsPage from '../components/ui/Modals/ResultsModal';
 
 export {
   CreatePage,
