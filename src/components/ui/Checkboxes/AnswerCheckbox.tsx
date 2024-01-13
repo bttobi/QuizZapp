@@ -1,6 +1,6 @@
 import React from 'react';
-import './AnswerCheckbox.css';
 import { motion } from 'framer-motion';
+import { Radio, cn } from '@nextui-org/react';
 
 interface AnswerCheckboxProps {
   index: number;
@@ -16,24 +16,34 @@ const AnswerCheckbox: React.FC<AnswerCheckboxProps> = ({
   const letters = 'ABCD';
   return (
     // TODO: animate it better
-    <motion.label
-      className="flex bg-default rounded-lg cursor-pointer sm:w-full sm:py-6 py-2 px-4 w-full"
-      htmlFor={`answer-${index}`}
-    >
-      <input
+    <motion.label htmlFor={`answer-${index}`} id="answerCheckbox">
+      <Radio
         onChange={onChange}
         id={`answer-${index}`}
-        name="answer"
+        name={`answer-${index}`}
         type="radio"
-        className="opacity-0 absolute"
-      />
-
-      <p className="flex justify-center align-center items-center break-words">
-        <span className="mr-4 sm:text-2xl rounded-full px-2">
-          {letters[index]}
-        </span>
-        <span className="text-lg">{answer}</span>
-      </p>
+        value={answer}
+        size="lg"
+        color="secondary"
+        className={cn(
+          'flex m-0 bg-background hover:bg-backgroundSecondary items-center sm:w-full sm:py-6 py-2 px-4 ',
+          'max-w-full w-full cursor-pointer rounded-lg gap-4 p-4 border-2',
+          'data-[selected=true]:border-success'
+        )}
+      >
+        <p className="flex justify-center align-center items-center break-words">
+          <span className="mr-4 sm:text-2xl rounded-full px-2">
+            {letters[index]}
+          </span>
+          <span
+            className="text-lg"
+            //@ts-ignore
+            style={{ textWrap: 'wrap', wordBreak: 'break-all' }}
+          >
+            {answer}
+          </span>
+        </p>
+      </Radio>
     </motion.label>
   );
 };

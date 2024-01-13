@@ -15,6 +15,8 @@ const QuizSearchInput: React.FC<QuizSearchInputProps> = ({
       value={value || ''}
       onChange={e => setValue(e.currentTarget.value)}
       label={messages.quizName}
+      isClearable
+      onClear={() => setValue('')}
       className="max-w-xs"
     >
       QuizSearchInput

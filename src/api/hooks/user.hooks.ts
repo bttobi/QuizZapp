@@ -1,13 +1,13 @@
 import { useMutation, useQuery } from '@tanstack/react-query';
 import axios, { AxiosError } from 'axios';
-import { UserAuth } from '../types/user.types';
+import { UserAuth, UserRanking } from '../types/user.types';
 import messages from '../messages/messages.json';
 import errorMessages from '../messages/errors.json';
 import {
   signUpUserRoute,
-  getUserRoute,
   signInUserRoute,
   signOutUserRoute,
+  getUserRanking,
 } from '../routes/user.routes';
 import parseError from '../helpers/parseError';
 import { useSignIn, useSignOut } from 'react-auth-kit';
@@ -17,13 +17,24 @@ import emitNotification, {
 } from '../../components/ui/Notifications/emitNotification';
 import useUser from '../../hooks/useUser';
 
-export const useGetUser = () => {
-  const { data: userData, refetch } = useQuery({
-    queryFn: async () => await axios.get(getUserRoute()).then(res => res.data),
-    queryKey: ['user'],
-    enabled: false,
+export const useGetUserRanking = () => {
+  const { user } = useUser();
+  const {
+    data: rankingData,
+    refetch,
+    isError,
+    isFetching,
+  } = useQuery<UserRanking>({
+    queryFn: async () =>
+      await axios.get(getUserRanking(user?.email)).then(res => res.data),
+    queryKey: ['userRanking', user?.email],
   });
-  return { userData, refetch };
+
+  if (isError) {
+    emitNotification({ message: messages.errorRanking });
+  }
+
+  return { rankingData, refetch, isFetching };
 };
 
 export const useSignUpUser = () => {
@@ -46,7 +57,7 @@ export const useSignUpUser = () => {
         tokenType: 'Bearer',
         authState: {
           email: res.data.email,
-          points: res.data.points,
+          userID: res.data.userID,
           token: res.data.token,
         },
       });
@@ -90,6 +101,7 @@ export const useSignInUser = () => {
         tokenType: 'Bearer',
         authState: {
           email: res.data.email,
+          userID: res.data.userID,
           token: res.data.token,
         },
       });

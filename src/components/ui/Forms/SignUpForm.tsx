@@ -63,7 +63,7 @@ const SignUpForm = () => {
       {!passwordsMatch && <ErrorMessage value={messages.passwordsDoNotMatch} />}
       <Button
         className="text-white"
-        disabled={!!Object.keys(errors).length || !passwordsMatch}
+        isDisabled={!!Object.keys(errors).length || !passwordsMatch}
         type="submit"
         color={!!Object.keys(errors).length ? 'danger' : 'success'}
         variant="solid"

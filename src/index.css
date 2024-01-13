@@ -60,3 +60,24 @@ main {
   background-color: #0a2647;
   opacity: 1;
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #001f33;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #5b9dd7;
+  border-radius: 45px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #3d668a;
+}

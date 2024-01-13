@@ -54,7 +54,7 @@ const SignInForm = () => {
       />
       <Button
         className="text-white"
-        disabled={!!Object.keys(errors).length}
+        isDisabled={!!Object.keys(errors).length}
         type="submit"
         color={!!Object.keys(errors).length ? 'danger' : 'success'}
         variant="solid"

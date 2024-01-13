@@ -1,4 +1,4 @@
-import CreatePage from './CreatePage';
+import QuizCreatePage from './QuizCreatePage';
 import ExplorePage from './ExplorePage';
 import HomePage from './HomePage';
 import LeaderboardPage from './LeaderboardPage';
@@ -7,9 +7,14 @@ import SignUpPage from './SignUpPage';
 import ProfilePage from './ProfilePage';
 import QuizPage from './QuizPage';
 import ResultsPage from '../components/ui/Modals/ResultsModal';
+import UserQuizzesPage from './UserQuizzesPage';
+import QuizEditPage from './QuizEditPage';
+import QuestionEditPage from './QuestionEditPage';
+import QuestionsEditPage from './QuestionsEditPage';
+import UserProfilePage from './UserProfilePage';
 
 export {
-  CreatePage,
+  QuizCreatePage,
   ExplorePage,
   HomePage,
   LeaderboardPage,
@@ -18,4 +23,9 @@ export {
   ProfilePage,
   QuizPage,
   ResultsPage,
+  UserQuizzesPage,
+  QuizEditPage,
+  QuestionEditPage,
+  QuestionsEditPage,
+  UserProfilePage,
 };

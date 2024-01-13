@@ -1,5 +1,5 @@
 import React from 'react';
-import { Question } from '../../../api/types/quiz.types';
+import { Question, UserAnswer } from '../../../api/types/quiz.types';
 import messages from '../../../api/messages/messages.json';
 import {
   Button,
@@ -7,13 +7,14 @@ import {
   ModalBody,
   ModalContent,
   ModalHeader,
+  cn,
 } from '@nextui-org/react';
 import ResultsList from '../Lists/ResultsList';
 import { useNavigate } from 'react-router-dom';
 
 interface ResultsPageProps {
   questions: Question[];
-  userAnswers: string[];
+  userAnswers: UserAnswer[];
 }
 
 const ResultsModal: React.FC<ResultsPageProps> = ({
@@ -29,11 +30,14 @@ const ResultsModal: React.FC<ResultsPageProps> = ({
       isDismissable={false}
       className="items-center absolute"
     >
-      <ModalContent className="top-24">
+      <ModalContent className="sm:top-12 top-0 sm:rounded-lg rounded-none sm:m-1 m-0">
         <ModalHeader>{messages.results}</ModalHeader>
-        <ModalBody className="p-8">
+        <ModalBody
+          className={cn('p-0 overflow-x-hidden flex flex-col items-center')}
+        >
           <ResultsList questions={questions} userAnswers={userAnswers} />
           <Button
+            className="my-4"
             onClick={() => {
               navigate('/explore');
               // this reload forces to invalidate all caches
