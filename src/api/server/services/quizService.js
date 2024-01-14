@@ -35,16 +35,45 @@ const getCorrectAnswers = async (req, res, next) => {
     next(error);
   }
 };
+
+const getQuizToEdit = async (req, res, next) => {
+  try {
+    const { quizID } = req.params;
+    const { rows } = await client.query(
+      `select quiz_name, category, thumbnail_src from quizzes
+      where quiz_id=$1`,
+      [quizID]
+    );
+
+    return res.status(200).json(rows[0]);
+  } catch (error) {
+    next(error);
+  }
+};
+const getQuestionToEdit = async (req, res, next) => {
+  try {
+    const { questionID } = req.params;
+    const { rows } = await client.query(
+      `select question, answers, correct from questions
+      where question_id=$1`,
+      [questionID]
+    );
+
+    return res.status(200).json(rows[0]);
+  } catch (error) {
+    next(error);
+  }
+};
 /***************************INSERT/CREATE***************************/
 const postResults = async (req, res, next) => {
   try {
     const { quizID } = req.params;
-    const { userID, correctAnswers, wrongAnswers } = req.body;
+    const { user_id, correctAnswers, wrongAnswers } = req.body;
     const { rows } = await client.query(
       `INSERT INTO public.leaderboard(
         user_id, quiz_id, g_answers, b_answers, points)
        VALUES ( $1, $2, $3, $4, $5);`,
-      [userID, quizID, correctAnswers, wrongAnswers, correctAnswers.length]
+      [user_id, quizID, correctAnswers, wrongAnswers, correctAnswers.length]
     );
 
     return res.sendStatus(204);
@@ -55,10 +84,10 @@ const postResults = async (req, res, next) => {
 
 const createQuiz = async (req, res, next) => {
   try {
-    const { quizName, category, userID, thumbnailSrc } = req.body;
+    const { quiz_name, category, user_id, thumbnail_src } = req.body;
     let thumbnail;
-    if (thumbnailSrc) {
-      thumbnail = thumbnailSrc;
+    if (thumbnail_src) {
+      thumbnail = thumbnail_src;
     } else {
       thumbnail = "https://i.imgur.com/CZaDkUQ.png";
     }
@@ -66,7 +95,7 @@ const createQuiz = async (req, res, next) => {
       `INSERT INTO public.quizzes(
         quiz_name, category, user_id, thumbnail_src)
        VALUES ( $1, $2, $3, $4);`,
-      [quizName, category, userID, thumbnail]
+      [quiz_name, category, user_id, thumbnail]
     );
 
     return res.sendStatus(204);
@@ -77,13 +106,14 @@ const createQuiz = async (req, res, next) => {
 
 const createQuestion = async (req, res, next) => {
   try {
-    const { quizID, question, answers, correctAnswer } = req.body;
-
+    const { quizID } = req.params;
+    const { question, answers, correct_answer } = req.body;
+    console.log(quizID);
     const { rows } = await client.query(
       `INSERT INTO public.questions(
         quiz_id, question, answers, correct)
        VALUES ( $1, $2, $3, $4);`,
-      [quizID, question, answers, correctAnswer]
+      [quizID, question, answers, correct_answer]
     );
     return res.sendStatus(204);
   } catch (error) {
@@ -94,16 +124,17 @@ const createQuestion = async (req, res, next) => {
 /***************************MODIFY***************************/
 const editQuiz = async (req, res, next) => {
   try {
-    const { quizName, category, quizID, thumbnailSrc } = req.body;
-    const thumbnail = thumbnailSrc
-      ? thumbnailSrc
+    const { quiz_name, category, thumbnail_src } = req.body;
+    const { quizID } = req.params;
+    const thumbnail = thumbnail_src
+      ? thumbnail_src
       : "https://i.imgur.com/CZaDkUQ.png";
 
     const { rows } = await client.query(
       `UPDATE public.quizzes
         SET quiz_name=$1, category=$2, thumbnail_src=$4
         WHERE quiz_id=$3;`,
-      [quizName, category, quizID, thumbnail]
+      [quiz_name, category, quizID, thumbnail]
     );
 
     return res.sendStatus(204);
@@ -114,12 +145,13 @@ const editQuiz = async (req, res, next) => {
 
 const deleteQuiz = async (req, res, next) => {
   try {
-    const { quizID, userID } = req.body;
+    const { quizzesIDs, user_id } = req.body;
 
     const { rows } = await client.query(
       `DELETE FROM public.quizzes
-       WHERE quiz_id=$1 and user_id=$2;`,
-      [quizID, userID]
+      where quiz_id = any ($1)
+      and user_id = $2;`,
+      [quizzesIDs, user_id]
     );
 
     return res.sendStatus(204);
@@ -130,13 +162,13 @@ const deleteQuiz = async (req, res, next) => {
 
 const editQuestion = async (req, res, next) => {
   try {
-    const { quizID, question, answers, correctAnswer } = req.body;
+    const { quiz_id, question, answers, correct_answer } = req.body;
 
     const { rows } = await client.query(
       `UPDATE public.questions
         SET question=$2, answers=$2, correct$3
       WHERE question_id=$1;;`,
-      [quizID, question, answers, correctAnswer]
+      [quiz_id, question, answers, correct_answer]
     );
 
     return res.sendStatus(204);
@@ -147,12 +179,12 @@ const editQuestion = async (req, res, next) => {
 
 const deleteQuestion = async (req, res, next) => {
   try {
-    const { questionID } = req.body;
+    const { question_id } = req.body;
 
     const { rows } = await client.query(
       `DELETE FROM public.questions
        WHERE question_id=$1;`,
-      [questionID]
+      [question_id]
     );
 
     return res.sendStatus(204);
@@ -164,6 +196,8 @@ const deleteQuestion = async (req, res, next) => {
 const quizService = {
   getQuiz,
   getCorrectAnswers,
+  getQuizToEdit,
+  getQuestionToEdit,
   postResults,
   createQuiz,
   editQuiz,

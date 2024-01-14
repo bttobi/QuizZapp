@@ -19,11 +19,8 @@ const getPoints = async (req, res, next) => {
   try {
     const { userEmail: email } = req.params;
     const { rows } = await client.query(
-      `Select (select (coalesce(sum(points),0)) as points 
-      from leaderboard where user_id=(select user_id from users where email = $1 )),
-      COALESCE((SELECT ROW_NUMBER () OVER ( ORDER BY POINTS desc) FROM
-      (select user_id, COALESCE(sum(points), 0) AS POINTS from leaderboard group by 1)
-      WHERE user_id=(select user_id from users where email = $1 )),0) AS PLACE`,
+      `select points, place from public."leaderboardView"
+      where email=$1`,
       [email]
     );
 

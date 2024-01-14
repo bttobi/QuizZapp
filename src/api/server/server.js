@@ -58,10 +58,13 @@ app.get(
 app.post("/quiz/create", (req, res, next) => {
   quizService.createQuiz(req, res, next);
 });
+app.get("/quiz/edit/:quizID", (req, res, next) => {
+  quizService.getQuizToEdit(req, res, next);
+});
 app.post("/quiz/edit/:quizID", (req, res, next) => {
   quizService.editQuiz(req, res, next);
 });
-app.post("/quiz/delete/:quizID", (req, res, next) => {
+app.post("/quiz/delete", (req, res, next) => {
   quizService.deleteQuiz(req, res, next);
 });
 
@@ -71,7 +74,7 @@ app.post("/quiz/:quizID/question/create", (req, res, next) => {
 app.post("/quiz/:quizID/question/edit/:questionID", (req, res, next) => {
   quizService.editQuestion(req, res, next);
 });
-app.post("/quiz/:quizID/question/delete/:questionID", (req, res, next) => {
+app.post("/quiz/:quizID/question/delete", (req, res, next) => {
   quizService.deleteQuestion(req, res, next);
 });
 
