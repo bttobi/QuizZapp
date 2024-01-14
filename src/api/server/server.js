@@ -1,44 +1,41 @@
-import app from './setup/serverSetup.js';
-import client from './setup/dbSetup.js';
-import jwtToken from './helpers/jwtHelper.js';
-import bcrypt from 'bcrypt';
-import passport from 'passport';
-import userService from './services/userService.js';
-import exploreService from './services/exploreService.js';
-import quizService from './services/quizService.js';
+import app from "./setup/serverSetup.js";
+import client from "./setup/dbSetup.js";
+import jwtToken from "./helpers/jwtHelper.js";
+import bcrypt from "bcrypt";
+import passport from "passport";
+import userService from "./services/userService.js";
+import exploreService from "./services/exploreService.js";
+import quizService from "./services/quizService.js";
+import leaderboardService from "./services/leaderboardService.js";
 
 /*
  ******************************************************
  ***********************USER***************************
  ******************************************************
  */
-app.post('/user/signup', async (req, res, next) => {
+app.post("/user/signup", async (req, res, next) => {
   userService.signUp(req, res, next);
 });
 
-app.post('/user/signin', (req, res, next) => {
+app.post("/user/signin", (req, res, next) => {
   userService.signIn(req, res, next);
 });
 
-app.post('/user/signout', (req, res, next) => {
+app.post("/user/signout", (req, res, next) => {
   userService.signOut(req, res, next);
 });
 
-app.get(
-  '/user/profile',
-  passport.authenticate('jwt', { session: false }),
-  (req, res, next) => {
-    userService.getProfile(req, res, next);
-  }
-);
-
 app.post(
-  '/user/token',
-  passport.authenticate('jwt', { session: false }),
+  "/user/token",
+  passport.authenticate("jwt", { session: false }),
   (req, res, next) => {
     userService.getToken(req, res, next);
   }
 );
+
+app.get("/user/points/:userEmail", (req, res, next) => {
+  userService.getPoints(req, res, next);
+});
 
 /*
  ******************************************************
@@ -46,10 +43,10 @@ app.post(
  ******************************************************
  */
 app.get(
-  '/explore/:page',
-  passport.authenticate('jwt', { session: false }),
+  "/explore/:page",
+  passport.authenticate("jwt", { session: false }),
   (req, res, next) => {
-    exploreService.getExplorePage(req, res, next);
+    exploreService.getQuizzes(req, res, next);
   }
 );
 
@@ -58,26 +55,55 @@ app.get(
  *************************QUIZ*************************
  ******************************************************
  */
+app.post("/quiz/create", (req, res, next) => {
+  quizService.createQuiz(req, res, next);
+});
+app.post("/quiz/edit/:quizID", (req, res, next) => {
+  quizService.editQuiz(req, res, next);
+});
+app.post("/quiz/delete/:quizID", (req, res, next) => {
+  quizService.deleteQuiz(req, res, next);
+});
+
+app.post("/quiz/:quizID/question/create", (req, res, next) => {
+  quizService.createQuestion(req, res, next);
+});
+app.post("/quiz/:quizID/question/edit/:questionID", (req, res, next) => {
+  quizService.editQuestion(req, res, next);
+});
+app.post("/quiz/:quizID/question/delete/:questionID", (req, res, next) => {
+  quizService.deleteQuestion(req, res, next);
+});
+
 app.get(
-  '/quiz/:quizID',
-  passport.authenticate('jwt', { session: false }),
+  "/quiz/:quizID",
+  // passport.authenticate("jwt", { session: false }),
   (req, res, next) => {
     quizService.getQuiz(req, res, next);
   }
 );
 
-app.post(
-  '/answers/:quizID',
-  passport.authenticate('jwt', { session: false }),
-  (req, res, next) => {
-    quizService.postAnswers(req, res, next);
-  }
-);
-
 app.get(
-  '/results/:userEmail/:quizID',
-  passport.authenticate('jwt', { session: false }),
+  "/results/:quizID",
+  // passport.authenticate("jwt", { session: false }),
   (req, res, next) => {
-    quizService.getResults(req, res, next);
+    quizService.getCorrectAnswers(req, res, next);
   }
 );
+app.post(
+  "/results/:quizID",
+  // passport.authenticate("jwt", { session: false }),
+  (req, res, next) => {
+    quizService.postResults(req, res, next);
+  }
+);
+/*
+/*
+ ******************************************************
+ *********************LEADERBOARD**********************
+ ******************************************************
+ */
+
+app.get("/leaderboard/:page", (req, res, next) => {
+  leaderboardService.getLeaderboard(req, res, next);
+});
