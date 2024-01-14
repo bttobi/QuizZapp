@@ -8,6 +8,7 @@ import emitNotification, {
   NotificationType,
 } from '../Notifications/emitNotification';
 import { useGetResults } from '../../../api/hooks/quiz.hooks';
+import ResultsModal from '../Modals/ResultsModal';
 
 interface QuizBodyProps {
   questions: Question[];
@@ -15,7 +16,7 @@ interface QuizBodyProps {
 
 const QuizBody: React.FC<QuizBodyProps> = ({ questions }) => {
   const { quizID, questionNumber } = useParams();
-  const { getResults, isPending } = useGetResults();
+  const { resultsData, getResults, isPending } = useGetResults();
   const navigate = useNavigate();
   const [questionNumberState, setQuestionNumberState] = useState<number>(
     Number(questionNumber || 0)
@@ -28,7 +29,6 @@ const QuizBody: React.FC<QuizBodyProps> = ({ questions }) => {
   const progressValue = 100 * ((questionNumberState + 1) / questions.length);
   const isLastQuestion = progressValue === 100;
 
-  console.log(userAnswers);
   const currentQuestion = questions[questionNumberState];
   const handleNext = () => {
     if (nextDisabled) {
@@ -48,8 +48,10 @@ const QuizBody: React.FC<QuizBodyProps> = ({ questions }) => {
     }
     getResults(userAnswers);
   };
-
-  return (
+  console.log(resultsData);
+  return resultsData ? (
+    <ResultsModal userAnswers={userAnswers} questions={questions} />
+  ) : (
     <>
       <section className="flex sm:gap-10 gap-2 flex-col justify-between align-center items-center bg-primary w-5/6 rounded-lg">
         <Progress color="secondary" value={progressValue} />

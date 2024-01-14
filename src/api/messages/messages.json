@@ -44,5 +44,6 @@
   "of": "of",
   "question": "Question",
   "submitAnswers": "Submit answers",
-  "submitAnswersError": "Could not submit answers, try again later"
+  "submitAnswersError": "Could not submit answers, try again later",
+  "goBack": "Go back"
 }

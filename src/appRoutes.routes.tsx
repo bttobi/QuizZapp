@@ -16,7 +16,6 @@ import {
   SignInPage,
   SignUpPage,
   QuizPage,
-  ResultsPage,
 } from './pages';
 
 export interface RouteType {
@@ -88,16 +87,6 @@ const routes: RouteType[] = [
     element: (
       <RequireAuth loginPath={'/signin'}>
         <QuizPage />
-      </RequireAuth>
-    ),
-    isNavVisible: false,
-  },
-  {
-    name: messages.results,
-    path: '/results/:quizID/',
-    element: (
-      <RequireAuth loginPath={'/signin'}>
-        <ResultsPage />
       </RequireAuth>
     ),
     isNavVisible: false,

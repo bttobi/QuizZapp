@@ -1,9 +1,13 @@
 import { useMutation, useQuery } from '@tanstack/react-query';
-import { getQuizRoute, getResultsRoute } from '../routes/quiz.routes';
+import {
+  getQuizRoute,
+  getResultsRoute,
+  postAnswersRoute,
+} from '../routes/quiz.routes';
 import axios from 'axios';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import useUser from '../../hooks/useUser';
-import { QuizData } from '../types/quiz.types';
+import { QuizData, Results } from '../types/quiz.types';
 import emitNotification, {
   NotificationType,
 } from '../../components/ui/Notifications/emitNotification';
@@ -40,20 +44,38 @@ export const useGetQuiz = () => {
 export const useGetResults = () => {
   const { user } = useUser();
   const { quizID } = useParams();
-  const navigate = useNavigate();
   const {
-    mutate: getResults,
     data: resultsData,
-    isPending,
-  } = useMutation({
+    refetch,
+    isFetching,
+    isError,
+  } = useQuery<Results>({
+    queryFn: async () =>
+      await axios
+        .get(getResultsRoute(Number(quizID || 0), user?.email), {
+          headers: { Authorization: `Bearer ${user?.token}` },
+        })
+        .then(res => res.data),
+    enabled: false,
+    queryKey: ['results', user?.email, quizID],
+  });
+
+  if (isError) {
+    emitNotification({
+      message: messages.submitAnswersError,
+      type: NotificationType.ERROR,
+    });
+  }
+
+  const { mutate: getResults, isPending } = useMutation({
     mutationFn: async (answers: string[]) =>
       axios.post(
-        getResultsRoute(Number(quizID || 0)),
+        postAnswersRoute(Number(quizID || 0)),
         { answers, user },
         { headers: { Authorization: `Bearer ${user?.token}` } }
       ),
     onSuccess: () => {
-      navigate(`/results/${quizID}`);
+      refetch();
     },
     onError: () => {
       emitNotification({
@@ -63,5 +85,9 @@ export const useGetResults = () => {
     },
   });
 
-  return { getResults, resultsData, isPending };
+  return {
+    getResults,
+    resultsData,
+    isPending: isFetching || isPending,
+  };
 };
