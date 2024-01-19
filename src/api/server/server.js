@@ -7,7 +7,7 @@ import userService from "./services/userService.js";
 import exploreService from "./services/exploreService.js";
 import quizService from "./services/quizService.js";
 import leaderboardService from "./services/leaderboardService.js";
-
+import scoresService from "./services/scoresService.js";
 /*
  ******************************************************
  ***********************USER***************************
@@ -71,11 +71,17 @@ app.post("/quiz/delete", (req, res, next) => {
 app.post("/quiz/:quizID/question/create", (req, res, next) => {
   quizService.createQuestion(req, res, next);
 });
+app.get("/quiz/:quizID/question/edit/:questionID", (req, res, next) => {
+  quizService.getQuestionToEdit(req, res, next);
+});
 app.post("/quiz/:quizID/question/edit/:questionID", (req, res, next) => {
   quizService.editQuestion(req, res, next);
 });
-app.post("/quiz/:quizID/question/delete", (req, res, next) => {
+app.post("/quiz/:quizID/questions/delete", (req, res, next) => {
   quizService.deleteQuestion(req, res, next);
+});
+app.get("/quiz/:quizID/questions/edit", (req, res, next) => {
+  quizService.getQuestionsForQuiz(req, res, next);
 });
 
 app.get(
@@ -109,4 +115,15 @@ app.post(
 
 app.get("/leaderboard/:page", (req, res, next) => {
   leaderboardService.getLeaderboard(req, res, next);
+});
+/*
+ ******************************************************
+ **********************SCORES**************************
+ ******************************************************
+ */
+app.get("/scores/all/:userID", (req, res, next) => {
+  scoresService.getPersonalOverallScores(req, res, next);
+});
+app.get("/scores/all", (req, res, next) => {
+  scoresService.getOverallScores(req, res, next);
 });

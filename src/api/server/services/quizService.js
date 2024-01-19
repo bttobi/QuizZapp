@@ -54,12 +54,27 @@ const getQuestionToEdit = async (req, res, next) => {
   try {
     const { questionID } = req.params;
     const { rows } = await client.query(
-      `select question, answers, correct from questions
+      `select question, answers, correct as correct_answer from questions
       where question_id=$1`,
       [questionID]
     );
 
     return res.status(200).json(rows[0]);
+  } catch (error) {
+    next(error);
+  }
+};
+
+const getQuestionsForQuiz = async (req, res, next) => {
+  try {
+    const { quizID } = req.params;
+    const { rows } = await client.query(
+      `select question_id, question from questions
+      where quiz_id=$1`,
+      [quizID]
+    );
+
+    return res.status(200).json(rows);
   } catch (error) {
     next(error);
   }
@@ -162,13 +177,14 @@ const deleteQuiz = async (req, res, next) => {
 
 const editQuestion = async (req, res, next) => {
   try {
-    const { quiz_id, question, answers, correct_answer } = req.body;
+    const { questionID } = req.params;
+    const { question, answers, correct_answer } = req.body;
 
     const { rows } = await client.query(
       `UPDATE public.questions
-        SET question=$2, answers=$2, correct$3
-      WHERE question_id=$1;;`,
-      [quiz_id, question, answers, correct_answer]
+        SET question=$2, answers=$3, correct=$4
+      WHERE question_id=$1;`,
+      [questionID, question, answers, correct_answer]
     );
 
     return res.sendStatus(204);
@@ -179,12 +195,12 @@ const editQuestion = async (req, res, next) => {
 
 const deleteQuestion = async (req, res, next) => {
   try {
-    const { question_id } = req.body;
+    const { questionsIDs } = req.body;
 
     const { rows } = await client.query(
       `DELETE FROM public.questions
-       WHERE question_id=$1;`,
-      [question_id]
+      where question_id = any ($1)`,
+      [questionsIDs]
     );
 
     return res.sendStatus(204);
@@ -198,6 +214,7 @@ const quizService = {
   getCorrectAnswers,
   getQuizToEdit,
   getQuestionToEdit,
+  getQuestionsForQuiz,
   postResults,
   createQuiz,
   editQuiz,
