@@ -15,7 +15,7 @@ const UserQuizzesPage = () => {
   return (
     <TabWrapper className="flex flex-col align-center items-center">
       <div className="text-3xl mt-4">My Quizzes</div>
-      <section className="flex gap-4 sm:gap-10 items-center align-center justify-center h-32">
+      <section className="flex gap-4 mx-4 sm:mx-0 sm:gap-10 items-center align-center justify-center h-32">
         <QuizSearchInput value={quizName} setValue={setQuizName} />
         <QuizCategoryDropdown
           className="max-w-xs"

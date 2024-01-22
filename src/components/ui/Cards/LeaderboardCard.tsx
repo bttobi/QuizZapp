@@ -18,14 +18,17 @@ const LeaderboardCard: React.FC<LeaderboardCardProps> = ({ data, isLast }) => {
       <motion.div
         whileHover={{ backgroundColor: '#0A2647' }}
         onClick={() => navigate(`/profile/${user_id}`)}
-        className={`grid grid-cols-3 gap-4 bg-secondary text-white cursor-pointer ${getRankingBgColor(
+        className={`grid grid-cols-5 gap-4 bg-secondary text-white cursor-pointer justify-center align-center items-center ${getRankingBgColor(
           place
         )} ${!isLast && 'border-b-3 '} border-backgroundSecondary p-2`}
       >
         <span className="text-center">{place}</span>
-        <span className="text-center flex justify-center items-center align-center">
+        <span
+          className="text-center flex justify-center items-center align-center grow-3 col-span-3"
+          style={{ hyphens: 'auto' }}
+        >
           {place == 1 && <FaTrophy className="mr-2" />}
-          {email}
+          {email.split('@')[0]}
           {place == 1 && <FaTrophy className="ml-2" />}
         </span>
         <span className="text-center">{points}</span>

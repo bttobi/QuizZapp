@@ -30,23 +30,24 @@ const UserProfilePage = () => {
   return (
     <TabWrapper className="flex flex-col justify-start items-center align-center">
       {isFetching || !userScoresData ? (
-        <Spinner
-          size="lg"
-          color="white"
-          className="absolute left-1/2 bottom-1/2"
-        />
+        <Spinner size="lg" color="white" className="absolute bottom-1/2" />
       ) : (
         <AnimatePresence>
           <motion.section
             initial={{ y: '50rem' }}
             animate={{ y: '0rem' }}
-            className="flex flex-col gap-4 bg-primary/70 rounded-lg p-4 text-lg text-white mt-8 text-center"
+            className="flex flex-col gap-4 bg-primary/70 rounded-lg p-4 text-lg text-white mt-8 text-center mx-4 mb-8"
           >
-            <span
+            <p
               //@ts-ignore
-              style={{ textWrap: 'wrap', wordBreak: 'break-all' }}
-              className="text-3xl bg-background p-4 rounded-lg"
-            >{`${userScoresData?.email} ${messages.profileStats}`}</span>
+              style={{ textWrap: 'wrap' }}
+              className="text-3xl bg-background py-4 px-1 rounded-lg flex flex-col"
+            >
+              <span className="text-2xl">
+                {userScoresData?.email.split('@')[0]}
+              </span>
+              <span className="text-2xl">{messages.profileStats}</span>
+            </p>
             {!Object.keys(userScoresData).length ? (
               <span>{messages.noData}</span>
             ) : (
@@ -71,12 +72,10 @@ const UserProfilePage = () => {
                 <span className="text-success">{`${messages.bestQuestion}: ${
                   userScoresData?.best_question || messages.noData
                 }`}</span>
-                <span className="text-success">{`${messages.bestProfQuiz}: ${bestProfInQuiz}%`}</span>
                 <span>{`${messages.bestQuestionProf}: ${bestQuestionProf}%`}</span>
                 <span className="text-danger">{`${messages.worstQuiz}: ${
                   userScoresData?.worst_quiz || messages.noData
                 }`}</span>
-                <span className="text-danger">{`${messages.worstProfQuiz}: ${worstProfInQuiz}%`}</span>
                 <span className="text-danger">{`${messages.worstProfQuiz}: ${worstProfInQuiz}%`}</span>
                 <span className="text-danger">{`${messages.worstQuestion}: ${
                   userScoresData?.worst_question || messages.noData

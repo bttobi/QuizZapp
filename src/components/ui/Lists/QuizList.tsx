@@ -91,11 +91,7 @@ const QuizList: React.FC<QuizListProps> = ({
   return (
     <div className="flex flex-col gap-10 align-center items-center justify-evenly mb-16 mx-2">
       {isFetching ? (
-        <Spinner
-          size="lg"
-          color="white"
-          className="absolute left-1/2 bottom-1/2"
-        />
+        <Spinner size="lg" color="white" className="absolute bottom-1/2" />
       ) : (
         <>
           <div className="flex flex-col justify-center items-center">
@@ -173,15 +169,17 @@ const QuizList: React.FC<QuizListProps> = ({
               )}
             </div>
           </div>
-          <Pagination
-            className="fixed sm:bottom-10 bottom-2 z-20 bg-primary rounded-lg"
-            showControls
-            loop
-            color="secondary"
-            total={Math.ceil(Number(quizzesCount || 1) / QUIZZES_PER_PAGE)}
-            initialPage={page}
-            onChange={page => onPageChange(page)}
-          />
+          {quizzesCount && Number(quizzesCount) !== 0 && (
+            <Pagination
+              className="fixed sm:bottom-10 bottom-6 z-20 bg-primary rounded-lg"
+              showControls
+              loop
+              color="secondary"
+              total={Math.ceil(Number(quizzesCount || 1) / QUIZZES_PER_PAGE)}
+              initialPage={page}
+              onChange={page => onPageChange(page)}
+            />
+          )}
         </>
       )}
     </div>

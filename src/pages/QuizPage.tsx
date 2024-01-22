@@ -10,11 +10,7 @@ const QuizPage: React.FC = () => {
   return (
     <TabWrapper className="flex flex-col align-center justify-start mt-12 items-center">
       {isFetching || !quizData ? (
-        <Spinner
-          size="lg"
-          color="white"
-          className="absolute left-1/2 bottom-1/2"
-        />
+        <Spinner size="lg" color="white" className="absolute bottom-1/2" />
       ) : (
         <QuizBody questions={quizData} />
       )}

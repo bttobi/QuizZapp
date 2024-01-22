@@ -12,31 +12,39 @@ const LeaderBoardList = () => {
   const fields = [messages.place, messages.user, messages.score];
 
   return isFetching ? (
-    <Spinner size="lg" color="white" className="absolute left-1/2 bottom-1/2" />
+    <Spinner size="lg" color="white" className="absolute bottom-1/2" />
   ) : (
     <>
-      <ul className="mt-12 bg-backgroundSecondary h-max-3/4 px-8 pb-8 pt-2 rounded-lg">
+      <ul className="mt-12 bg-backgroundSecondary h-max-3/4 px-8 pb-8 pt-2 rounded-lg sm:w-1/2">
         <div className="text-3xl mt-4 text-center mb-8">
           {messages.bestPlayers}
         </div>
-        <LeaderBoardListHeader fields={fields} />
-        {leaderboard?.map((data, index) => (
-          <LeaderboardCard
-            key={data.email}
-            data={data}
-            isLast={leaderboard.length - 1 === index}
-          />
-        ))}
+        {!leaderboard?.length ? (
+          <span className="flex justify-center">{messages.noData}</span>
+        ) : (
+          <>
+            <LeaderBoardListHeader fields={fields} />
+            {leaderboard?.map((data, index) => (
+              <LeaderboardCard
+                key={data.email}
+                data={data}
+                isLast={leaderboard.length - 1 === index}
+              />
+            ))}
+          </>
+        )}
       </ul>
-      <Pagination
-        className="fixed sm:bottom-10 bottom-2 z-20 bg-primary rounded-lg"
-        showControls
-        loop
-        color="secondary"
-        total={Math.ceil((leaderboardCount || 1) / 100)}
-        initialPage={page}
-        onChange={page => setPage(page)}
-      />
+      {leaderboardCount && Number(leaderboardCount) !== 0 && (
+        <Pagination
+          className="fixed sm:bottom-10 bottom-6 z-20 bg-primary rounded-lg"
+          showControls
+          loop
+          color="secondary"
+          total={Math.ceil((leaderboardCount || 1) / 100)}
+          initialPage={page}
+          onChange={page => leaderboardCount && setPage(page)}
+        />
+      )}
     </>
   );
 };

@@ -62,11 +62,7 @@ const QuestionsList = () => {
   return (
     <>
       {isFetching || !questions ? (
-        <Spinner
-          size="lg"
-          color="white"
-          className="absolute left-1/2 bottom-1/2"
-        />
+        <Spinner size="lg" color="white" className="absolute bottom-1/2" />
       ) : (
         <>
           <ConfirmationModal
@@ -108,7 +104,7 @@ const QuestionsList = () => {
               {messages.delete}
             </Button>
           </section>
-          <ul className="grid grid-col-1 justify-center items-center align-center gap-4 mt-12 ">
+          <ul className="grid grid-col-1 justify-center items-center align-center gap-4 mt-12 p-4 bg-backgroundSecondary rounded-lg mb-32 mx-4">
             <AnimatePresence>
               {filteredQuestions
                 ?.sort((a, b) =>

@@ -26,12 +26,19 @@ export const useGetUserRanking = () => {
     isFetching,
   } = useQuery<UserRanking>({
     queryFn: async () =>
-      await axios.get(getUserRanking(user?.email)).then(res => res.data),
+      await axios
+        .get(getUserRanking(user?.email), {
+          headers: { Authorization: `Bearer ${user?.token}` },
+        })
+        .then(res => res.data),
     queryKey: ['userRanking', user?.email],
   });
 
   if (isError) {
-    emitNotification({ message: messages.errorRanking });
+    emitNotification({
+      message: messages.errorRanking,
+      type: NotificationType.ERROR,
+    });
   }
 
   return { rankingData, refetch, isFetching };

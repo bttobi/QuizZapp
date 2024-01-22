@@ -1,4 +1,4 @@
-import client from "../setup/dbSetup.js";
+import client from '../setup/dbSetup.js';
 
 const getLeaderboard = async (req, res, next) => {
   try {

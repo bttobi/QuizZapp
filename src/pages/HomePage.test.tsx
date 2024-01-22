@@ -1,6 +1,3 @@
-/**
- * @jest-environment jsdom
- */
 import { HomePage } from '.';
 import { render, waitFor } from '../tests/test-utils';
 

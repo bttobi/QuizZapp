@@ -1,4 +1,4 @@
-import client from "../setup/dbSetup.js";
+import client from '../setup/dbSetup.js';
 /***************************GET***************************/
 const getQuiz = async (req, res, next) => {
   try {
@@ -11,7 +11,7 @@ const getQuiz = async (req, res, next) => {
 
     const shuffledQuestions = rows
       .sort((a, b) => 0.5 - Math.random())
-      .map((question) => {
+      .map(question => {
         question.answers.sort((a, b) => 0.5 - Math.random());
         return question;
       });
@@ -104,7 +104,7 @@ const createQuiz = async (req, res, next) => {
     if (thumbnail_src) {
       thumbnail = thumbnail_src;
     } else {
-      thumbnail = "https://i.imgur.com/CZaDkUQ.png";
+      thumbnail = 'https://i.imgur.com/CZaDkUQ.png';
     }
     const { rows } = await client.query(
       `INSERT INTO public.quizzes(
@@ -143,7 +143,7 @@ const editQuiz = async (req, res, next) => {
     const { quizID } = req.params;
     const thumbnail = thumbnail_src
       ? thumbnail_src
-      : "https://i.imgur.com/CZaDkUQ.png";
+      : 'https://i.imgur.com/CZaDkUQ.png';
 
     const { rows } = await client.query(
       `UPDATE public.quizzes

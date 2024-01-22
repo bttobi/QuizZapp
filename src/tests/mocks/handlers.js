@@ -1,7 +1,8 @@
-import { rest } from 'msw';
+import { http } from 'msw';
+import exploreResponse from '../mocks/data/explore.testdata.json';
 
 export const handlers = [
-  rest.get('', (req, res, ctx) => {
-    return res(ctx.status(200)), ctx.json({});
+  http.get('/api/explore/1', (req, res, ctx) => {
+    return res(ctx.status(200), ctx.json({ exploreResponse }));
   }),
 ];

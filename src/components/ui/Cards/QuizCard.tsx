@@ -89,9 +89,9 @@ const QuizCard: React.FC<QuizCardProps> = ({
               {quiz_name}
             </span>
             <span
-              className="text-tiny text-white/60 uppercase font-bold relative top-16 text-wrap"
+              className="text-tiny text-white/60 uppercase font-bold mt-auto mb-2 text-wrap"
               //@ts-ignore
-              style={{ textWrap: 'wrap', wordBreak: 'break-all' }}
+              style={{ textWrap: 'wrap', wordBreak: 'break-word' }}
             >
               {`${messages.createdBy}: ${author}`}
             </span>

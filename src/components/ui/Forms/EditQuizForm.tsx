@@ -1,4 +1,3 @@
-import React from 'react';
 import { useForm } from 'react-hook-form';
 import { QuizInputs } from './input.types';
 import { useEditQuiz, useGetQuizToEdit } from '../../../api/hooks/quiz.hooks';
@@ -44,8 +43,6 @@ const EditQuizForm = () => {
     setValue('category', key);
   };
 
-  console.log();
-
   useEffect(() => {
     setValue('name', quizData?.quiz_name || '');
     setCategory(quizData?.category as Category);
@@ -53,7 +50,7 @@ const EditQuizForm = () => {
   }, [quizData, isFetching]);
 
   return isFetching ? (
-    <Spinner size="lg" color="white" className="absolute left-1/2 bottom-1/2" />
+    <Spinner size="lg" color="white" className="absolute bottom-1/2" />
   ) : (
     <form
       className="flex flex-col gap-4 rounded-xl px-12 py-6 bg-backgroundSecondary mb-4 mt-4 sm:mt-16 w-3/4 justify-center items-center"

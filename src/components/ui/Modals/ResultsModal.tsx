@@ -28,16 +28,18 @@ const ResultsModal: React.FC<ResultsPageProps> = ({
       defaultOpen
       hideCloseButton
       isDismissable={false}
-      className="items-center absolute"
+      className="items-center absolute w-full"
     >
-      <ModalContent className="sm:top-12 top-0 sm:rounded-lg rounded-none sm:m-1 m-0">
-        <ModalHeader>{messages.results}</ModalHeader>
+      <ModalContent className="sm:top-12 top-0 sm:rounded-lg rounded-none sm:m-1 m-0 sm:w-auto w-full sm:h-auto h-full">
+        <ModalHeader className="border-white border-b-2 w-full text-center flex justify-center">
+          {messages.results}
+        </ModalHeader>
         <ModalBody
           className={cn('p-0 overflow-x-hidden flex flex-col items-center')}
         >
           <ResultsList questions={questions} userAnswers={userAnswers} />
           <Button
-            className="my-4"
+            className="my-4 p-4"
             onClick={() => {
               navigate('/explore');
               // this reload forces to invalidate all caches

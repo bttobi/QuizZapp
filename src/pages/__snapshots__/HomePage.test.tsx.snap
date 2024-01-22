@@ -10,16 +10,16 @@ exports[`HomePage component > matches snapshot 1`] = `
       class="flex gap-20 items-center h-full"
     >
       <article
-        class="flex sm:flex-row sm:text-x3l flex-col justify-center align-center items-center gap-10 w-auto bg-primary/60 p-4 rounded-lg mx-10 text-md text-justify shadow-lg"
+        class="flex sm:flex-row sm:text-x3l flex-col justify-center align-center items-center gap-10 w-auto bg-primary/60 p-4 rounded-lg mx-10 text-md text-justify shadow-lg my-4"
       >
         <div
-          class="sm:scale-125 scale-100 ml-4 w-full h-full"
+          class="sm:scale-125 scale-100 ml-4 w-full h-full flex justify-center"
           style="transform: translateY(5rem) translateZ(0);"
         >
           <img
-            class="mr-4 + sm:scale-125 scale-100 ml-4"
+            class="mr-4 + sm:scale-150 scale-100 ml-4"
             height="128px"
-            src="https://private-user-images.githubusercontent.com/76923032/279826261-22cfd9bc-5391-4feb-be33-a294b3b0603f.svg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDUyNTE0OTMsIm5iZiI6MTcwNTI1MTE5MywicGF0aCI6Ii83NjkyMzAzMi8yNzk4MjYyNjEtMjJjZmQ5YmMtNTM5MS00ZmViLWJlMzMtYTI5NGIzYjA2MDNmLnN2Zz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAxMTQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMTE0VDE2NTMxM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTU4NzFkYTZhMzk4NmM1NDlkYmU5MDIzNTM4NzQ1NjFjMmNhMjY1OWRmZjI4NTA1M2FkZTlhZjY4N2E2ZWQ4M2EmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.iJj94shtiBOC9OCHaZHEWHGfGBZbkuzhMhIkbzK07tc"
+            src="https://i.imgur.com/VRwVtXr.png"
             width="128px"
           />
         </div>
@@ -31,6 +31,21 @@ exports[`HomePage component > matches snapshot 1`] = `
           >
             Welcome to our dynamic quiz creation platform - QuizZapp! Unleash your inner quizmaster and craft captivating quizzes on any topic under the sun. Dive into a world of knowledge, challenge your friends, and climb the ranks on our leaderboard by answering questions with precision. Earn points for every correct answer, unlocking new levels of expertise as you conquer diverse trivia. Join us in this interactive journey where learning meets excitement and test your wits against the best!
           </span>
+          <div
+            aria-label="Loading"
+            class="relative inline-flex flex-col gap-2 items-center justify-center mt-4"
+          >
+            <div
+              class="relative flex w-10 h-10"
+            >
+              <i
+                class="absolute w-full h-full rounded-full animate-spinner-ease-spin border-solid border-t-transparent border-l-transparent border-r-transparent border-3 border-b-white"
+              />
+              <i
+                class="absolute w-full h-full rounded-full opacity-75 animate-spinner-linear-spin border-dotted border-t-transparent border-l-transparent border-r-transparent border-3 border-b-white"
+              />
+            </div>
+          </div>
           <button
             class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-unit-4 min-w-unit-20 h-unit-10 gap-unit-2 rounded-medium [&>svg]:max-w-[theme(spacing.unit-8)] data-[pressed=true]:scale-[0.97] transition-transform-colors-opacity motion-reduce:transition-none bg-success data-[hover=true]:opacity-hover mt-8 w-48 animate-pulse text-white text-xl"
             type="button"

@@ -45,7 +45,9 @@ const NavigationBar: React.FC<NavigationBarProps> = ({ items }) => {
             to="/"
           >
             <QuizZappLogo width={'35px'} height={'35px'} />
-            <p className="font-bold text-xl sm:text-lg">QuizZapp</p>
+            <p className="font-bold text-xl sm:text-lg sm:visible hidden">
+              QuizZapp
+            </p>
           </NavLink>
         </NavbarBrand>
       </NavbarContent>

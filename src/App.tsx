@@ -1,4 +1,3 @@
-import React from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { HashRouter, Route, Routes } from 'react-router-dom';
 import NavigationBar from './components/ui/Navigation/NavigationBar';
@@ -8,7 +7,7 @@ import refreshToken from './api/helpers/refreshToken';
 
 export const queryClient = new QueryClient({
   defaultOptions: {
-    queries: { refetchOnWindowFocus: false, staleTime: Infinity },
+    queries: { refetchOnWindowFocus: false, staleTime: 60000 },
   },
 });
 

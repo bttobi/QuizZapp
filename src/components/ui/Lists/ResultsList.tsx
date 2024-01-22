@@ -38,9 +38,11 @@ const ResultsList: React.FC<ResultsListProps> = ({
 
   return (
     <ul className="grid grid-cols-1 overflow-y-auto min-w-96">
-      <div className="w-full flex flex-col justify-center items-center gap-4">
+      <div className="flex flex-col justify-center items-center gap-4 p-8 border-b-2 border-white">
         <span
-          className={`${percentage < 50 ? 'text-danger' : 'text-success'}`}
+          className={`${
+            percentage < 50 ? 'text-danger' : 'text-success'
+          } font-bold`}
         >{`${messages.earnedPoints}:  ${calulateScore()}/${
           questions.length
         } - ${percentage}%`}</span>
@@ -49,7 +51,7 @@ const ResultsList: React.FC<ResultsListProps> = ({
 
       {questions.map((el, questionNumber) => (
         <li
-          className="mt-8 border-primary border-2 rounded-lg py-2"
+          className="mt-8 border-primary border-2 rounded-lg p-2"
           key={`${crypto.randomUUID()}`}
         >
           <p

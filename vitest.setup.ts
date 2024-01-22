@@ -4,7 +4,7 @@ import { handlers } from './src/tests/mocks/handlers';
 export const server = setupServer(...handlers);
 
 beforeAll(() => {
-  server.listen();
+  server.listen({ onUnhandledRequest: 'error' });
 });
 
 afterEach(() => {

@@ -37,8 +37,12 @@ const AnswerCheckbox: React.FC<AnswerCheckboxProps> = ({
           </span>
           <span
             className="text-lg"
-            //@ts-ignore
-            style={{ textWrap: 'wrap', wordBreak: 'break-all' }}
+            style={{
+              //@ts-ignore
+              textWrap: 'wrap',
+              wordBreak: 'break-word',
+              hyphens: 'auto',
+            }}
           >
             {answer}
           </span>

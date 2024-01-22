@@ -36,11 +36,11 @@ const ResultsCard: React.FC<ResultsCardProps> = ({
       <span
         className="flex gap-2 mr-4 sm:text-2xl rounded-full px-2"
         //@ts-ignore
-        style={{ textWrap: 'wrap', wordBreak: 'break-all' }}
+        style={{ textWrap: 'wrap', wordBreak: 'break-word' }}
       >
         {letters[answerNumber]}
         {/*@ts-ignore*/}
-        <span style={{ textWrap: 'wrap', wordBreak: 'break-all' }}>
+        <span style={{ textWrap: 'wrap', wordBreak: 'break-word' }}>
           {answer}
         </span>
       </span>

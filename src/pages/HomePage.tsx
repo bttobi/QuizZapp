@@ -14,9 +14,10 @@ const HomePage = () => {
   return (
     <TabWrapper>
       <section className="flex gap-20 items-center h-full">
-        <article className="flex sm:flex-row sm:text-x3l flex-col justify-center align-center items-center gap-10 w-auto bg-primary/60 p-4 rounded-lg mx-10 text-md text-justify shadow-lg">
+        <article className="flex sm:flex-row sm:text-x3l flex-col justify-center align-center items-center gap-10 w-auto bg-primary/60 p-4 rounded-lg mx-10 text-md text-justify shadow-lg my-4">
           <AnimatePresence>
             <motion.div
+              key="logo"
               className="sm:scale-125 scale-100 ml-4 w-full h-full flex justify-center"
               initial={{ y: '5rem' }}
               animate={{ y: '0rem' }}
@@ -29,16 +30,23 @@ const HomePage = () => {
               />
             </motion.div>
           </AnimatePresence>
-          <p className="flex flex-col justify-center items-center mx-2 sm:text-2xl text-xl">
+          <div className="flex flex-col justify-center items-center mx-2 sm:text-2xl text-xl">
             <AnimatePresence>
-              <motion.span initial={{ x: '5rem' }} animate={{ x: '0rem' }}>
+              <motion.span
+                key="description"
+                initial={{ x: '5rem' }}
+                animate={{ x: '0rem' }}
+              >
                 {messages.description}
               </motion.span>
               {isFetching || !allStatsData ? (
                 <Spinner size="lg" color="white" className="mt-4" />
               ) : (
                 <AnimatePresence>
-                  <div className="flex justify-center items-center flex-col gap-4 mt-4 text-xl p-4 bg-backgroundSecondary/40 rounded-xl text-center">
+                  <div
+                    key="stats"
+                    className="flex justify-center items-center flex-col gap-4 mt-4 text-xl p-4 bg-backgroundSecondary/40 rounded-xl text-center"
+                  >
                     <motion.span
                       initial={{ x: '5rem' }}
                       animate={{ x: '0rem' }}
@@ -87,7 +95,7 @@ const HomePage = () => {
             >
               {messages.getStarted}
             </Button>
-          </p>
+          </div>
         </article>
       </section>
     </TabWrapper>

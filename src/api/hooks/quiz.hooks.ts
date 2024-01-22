@@ -272,6 +272,7 @@ export const useEditQuiz = () => {
 };
 
 export const useGetQuestions = () => {
+  const { user } = useUser();
   const { quizID } = useParams();
   const {
     data: questions,
@@ -281,7 +282,11 @@ export const useGetQuestions = () => {
   } = useQuery<Omit<Omit<QuestionData, 'answers'>, 'correct_answer'>[]>({
     queryFn: async () =>
       await axios
-        .get(getQuestionsRoute(Number(quizID || 0)))
+        .get(getQuestionsRoute(Number(quizID || 0)), {
+          headers: {
+            Authorization: `Bearer ${user?.token}`,
+          },
+        })
         .then(res => res.data),
     queryKey: ['edit', 'questions', quizID],
   });

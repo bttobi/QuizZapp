@@ -12,7 +12,7 @@ const ExplorePage = () => {
   const [quizCategory, setQuizCategory] = useState<Category | null>(null);
   return (
     <TabWrapper className="flex flex-col">
-      <section className="flex gap-4 sm:gap-10 items-center align-center justify-center h-32">
+      <section className="flex gap-4 mx-4 sm:mx-0 sm:gap-10 items-center align-center justify-center h-32">
         <QuizSearchInput value={quizName} setValue={setQuizName} />
         <QuizCategoryDropdown
           className="max-w-xs"

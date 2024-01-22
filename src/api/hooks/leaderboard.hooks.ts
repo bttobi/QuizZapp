@@ -23,7 +23,7 @@ export const useGetLeaderboard = (page: number) => {
 
   return {
     leaderboard: data?.leaderboard,
-    leaderboardCount: data?.leaderboardCount,
+    leaderboardCount: data?.leaderboard_count,
     isFetching,
   };
 };

@@ -15,11 +15,7 @@ const QuestionsEditPage = () => {
   return (
     <TabWrapper className="flex flex-col justify-start align-center items-center">
       {isFetching ? (
-        <Spinner
-          size="lg"
-          color="white"
-          className="absolute left-1/2 bottom-1/2"
-        />
+        <Spinner size="lg" color="white" className="absolute bottom-1/2" />
       ) : (
         <>
           <ActionQuestionModal

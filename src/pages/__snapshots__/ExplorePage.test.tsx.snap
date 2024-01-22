@@ -1,0 +1,201 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ExplorePage component > matches snapshot 1`] = `
+<div>
+  <div
+    class="w-full h-full flex flex-col"
+    style="opacity: 0;"
+  >
+    <section
+      class="flex gap-4 mx-4 sm:mx-0 sm:gap-10 items-center align-center justify-center h-32"
+    >
+      <div
+        class="group flex flex-col w-full max-w-xs"
+        data-has-elements="true"
+        data-has-label="true"
+        data-has-value="true"
+        data-slot="base"
+      >
+        <div
+          class="relative w-full inline-flex tap-highlight-transparent shadow-sm px-3 bg-default-100 data-[hover=true]:bg-default-200 group-data-[focus=true]:bg-default-100 min-h-unit-10 rounded-medium flex-col items-start justify-center gap-0 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background h-14 py-2"
+          data-slot="input-wrapper"
+          style="cursor: text;"
+        >
+          <label
+            class="absolute z-10 pointer-events-none origin-top-left subpixel-antialiased block text-foreground-500 cursor-text will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-default-600 group-data-[filled-within=true]:pointer-events-auto group-data-[filled-within=true]:scale-85 text-small group-data-[filled-within=true]:-translate-y-[calc(50%_+_theme(fontSize.small)/2_-_6px)] pe-2 max-w-full text-ellipsis overflow-hidden"
+            data-slot="label"
+            for="react-aria-:rm:"
+            id="react-aria-:rn:"
+          >
+            Quiz name
+          </label>
+          <div
+            class="inline-flex w-full items-center h-full box-border group-data-[has-label=true]:items-end pb-0.5"
+            data-slot="inner-wrapper"
+          >
+            <input
+              aria-label="Quiz name"
+              aria-labelledby="react-aria-:rm: react-aria-:rn:"
+              class="w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 text-small peer pr-6 group-data-[has-value=true]:text-default-foreground"
+              data-slot="input"
+              id="react-aria-:rm:"
+              type="text"
+              value=""
+            />
+            <span
+              class="p-2 -m-2 z-10 hidden absolute right-3 appearance-none select-none opacity-0 hover:!opacity-100 cursor-pointer active:!opacity-70 rounded-full outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-large peer-data-[filled=true]:opacity-70 peer-data-[filled=true]:block transition-opacity motion-reduce:transition-none"
+              data-slot="clear-button"
+              role="button"
+              tabindex="0"
+            >
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                height="1em"
+                role="presentation"
+                viewBox="0 0 24 24"
+                width="1em"
+              >
+                <path
+                  d="M12 2a10 10 0 1010 10A10.016 10.016 0 0012 2zm3.36 12.3a.754.754 0 010 1.06.748.748 0 01-1.06 0l-2.3-2.3-2.3 2.3a.748.748 0 01-1.06 0 .754.754 0 010-1.06l2.3-2.3-2.3-2.3A.75.75 0 019.7 8.64l2.3 2.3 2.3-2.3a.75.75 0 011.06 1.06l-2.3 2.3z"
+                  fill="currentColor"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        class="group inline-flex flex-column w-full max-w-xs"
+      >
+        <div
+          class="group flex flex-col w-full"
+          data-has-elements="true"
+          data-has-label="true"
+          data-has-value="true"
+          data-slot="base"
+        >
+          <div
+            class="relative w-full inline-flex tap-highlight-transparent shadow-sm px-3 bg-default-100 data-[hover=true]:bg-default-200 group-data-[focus=true]:bg-default-100 min-h-unit-10 rounded-medium flex-col items-start justify-center gap-0 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background h-14 py-2"
+            data-slot="input-wrapper"
+            style="cursor: text;"
+          >
+            <label
+              class="absolute z-10 pointer-events-none origin-top-left subpixel-antialiased block text-foreground-500 cursor-text will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-default-600 group-data-[filled-within=true]:pointer-events-auto group-data-[filled-within=true]:scale-85 text-small group-data-[filled-within=true]:-translate-y-[calc(50%_+_theme(fontSize.small)/2_-_6px)] pe-2 max-w-full text-ellipsis overflow-hidden"
+              data-slot="label"
+              for="react-aria-:rt:"
+              id="react-aria-:r15:"
+            >
+              Quiz category
+            </label>
+            <div
+              class="inline-flex w-full items-center h-full box-border group-data-[has-label=true]:items-end pb-0.5"
+              data-slot="inner-wrapper"
+            >
+              <input
+                aria-autocomplete="list"
+                aria-expanded="false"
+                aria-label="Quiz category"
+                aria-labelledby="react-aria-:ru:"
+                autocomplete="off"
+                class="w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 text-small group-data-[has-value=true]:text-default-foreground"
+                data-has-end-content="true"
+                data-slot="input"
+                id="react-aria-:rt:"
+                role="combobox"
+                spellcheck="false"
+                type="text"
+                value=""
+              />
+              <div
+                class="relative flex h-full items-center -mr-2"
+              >
+                <button
+                  aria-expanded="false"
+                  aria-haspopup="listbox"
+                  aria-label="Show suggestions"
+                  aria-labelledby="react-aria-:rr: react-aria-:ru:"
+                  class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 gap-unit-2 rounded-full px-unit-0 !gap-unit-0 data-[pressed=true]:scale-[0.97] transition-transform-colors-opacity motion-reduce:transition-none bg-transparent data-[hover=true]:bg-default/40 min-w-unit-8 w-unit-8 h-unit-8 text-medium translate-x-1 cursor-text opacity-0 text-default-500 group-data-[invalid=true]:text-danger data-[visible=true]:opacity-100 data-[visible=true]:cursor-pointer sm:data-[visible=true]:opacity-0 sm:group-data-[hover=true]:data-[visible=true]:opacity-100"
+                  data-visible="false"
+                  id="react-aria-:rr:"
+                  tabindex="-1"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    fill="none"
+                    focusable="false"
+                    height="1em"
+                    role="presentation"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="1em"
+                  >
+                    <path
+                      d="M18 6L6 18M6 6l12 12"
+                    />
+                  </svg>
+                </button>
+                <button
+                  aria-expanded="false"
+                  aria-haspopup="listbox"
+                  aria-label="Show suggestions"
+                  aria-labelledby="react-aria-:rr: react-aria-:ru:"
+                  class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 gap-unit-2 rounded-full px-unit-0 !gap-unit-0 data-[pressed=true]:scale-[0.97] transition-transform-colors-opacity bg-transparent text-default-foreground data-[hover=true]:bg-default/40 min-w-unit-8 w-unit-8 h-unit-8 text-medium transition-transform duration-150 ease motion-reduce:transition-none data-[open=true]:rotate-180"
+                  id="react-aria-:rr:"
+                  tabindex="-1"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    fill="none"
+                    focusable="false"
+                    height="1em"
+                    role="presentation"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    viewBox="0 0 24 24"
+                    width="1em"
+                  >
+                    <path
+                      d="m6 9 6 6 6-6"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="flex items-center justify-center flex-wrap"
+    >
+      <div
+        class="flex flex-col gap-10 align-center items-center justify-evenly mb-16 mx-2"
+      >
+        <div
+          aria-label="Loading"
+          class="inline-flex flex-col gap-2 items-center justify-center absolute bottom-1/2"
+        >
+          <div
+            class="relative flex w-10 h-10"
+          >
+            <i
+              class="absolute w-full h-full rounded-full animate-spinner-ease-spin border-solid border-t-transparent border-l-transparent border-r-transparent border-3 border-b-white"
+            />
+            <i
+              class="absolute w-full h-full rounded-full opacity-75 animate-spinner-linear-spin border-dotted border-t-transparent border-l-transparent border-r-transparent border-3 border-b-white"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+`;
