@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import TabWrapper from '../components/ui/Wrappers/TabWrapper';
 import SignUpForm from '../components/ui/Forms/SignUpForm';

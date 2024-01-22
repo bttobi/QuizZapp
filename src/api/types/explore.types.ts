@@ -1,24 +1,48 @@
 export enum Category {
+  ANIMALS = 'animals',
   ANIME = 'anime',
-  MANGA = 'manga',
-  COMICS = 'comics',
-  WORLD = 'world',
-  SCIENCE = 'science',
-  PHYSICS = 'physics',
-  MATH = 'math',
-  HISTORY = 'history',
-  ENGLISH = 'english',
-  CUSTOM = 'custom',
-  GAMING = 'gaming',
+  ART = 'art',
+  ASTROLOGY = 'astrology',
+  BOOKS = 'books',
   CODING = 'coding',
+  COMICS = 'comics',
+  CULTURE = 'culture',
+  CUSTOM = 'custom',
   ELECTRONICS = 'electronics',
+  ENGLISH = 'english',
   FOOD = 'food',
+  GAMING = 'gaming',
+  GEOGRAPHY = 'geography',
+  HISTORY = 'history',
+  LANGUAGES = 'languages',
+  MANGA = 'manga',
+  MATH = 'math',
+  MOVIES = 'movies',
+  MUSIC = 'music',
+  MYTHOLOGY = 'mythology',
+  PHILOSOPHY = 'philosophy',
+  PHYSICS = 'physics',
+  PSYCHOLOGY = 'psychology',
+  SCIENCE = 'science',
+  SPORTS = 'sports',
+  TECHNOLOGY = 'technology',
+  TRAVEL = 'travel',
+  VEHICLES = 'vehicles',
+  WEATHER = 'weather',
+  WELLNESS = 'wellness',
+  WORLD = 'world',
 }
 
 export interface QuizType {
-  quizID: number;
-  name: string;
+  quiz_id: number;
+  quiz_name: string;
   category: Category;
   author: string;
-  thumbnailSrc?: string;
+  question_count: number;
+  thumbnail_src?: string;
+}
+
+export interface QuizzesData {
+  quizzes: QuizType[];
+  quizzes_count: number;
 }

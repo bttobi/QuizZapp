@@ -1,3 +1,4 @@
+import React from 'react';
 import TabWrapper from '../components/ui/Wrappers/TabWrapper';
 import { useGetQuiz } from '../api/hooks/quiz.hooks';
 import { Spinner } from '@nextui-org/react';
@@ -15,7 +16,7 @@ const QuizPage: React.FC = () => {
           className="absolute left-1/2 bottom-1/2"
         />
       ) : (
-        <QuizBody questions={quizData.questions} />
+        <QuizBody questions={quizData} />
       )}
     </TabWrapper>
   );

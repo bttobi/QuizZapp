@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link, LinkProps, NavbarItem } from '@nextui-org/react';
 import { ReactNode } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
@@ -17,7 +18,7 @@ const NavigationLink: React.FC<NavigationLinkProps> = ({
 
   return (
     <NavbarItem isActive={isActive}>
-      <NavLink to={path}>
+      <NavLink to={path || '/'}>
         <Link color={isActive ? 'primary' : color} as="div">
           {children}
         </Link>

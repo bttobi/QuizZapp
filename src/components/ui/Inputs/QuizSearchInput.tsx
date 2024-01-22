@@ -1,3 +1,4 @@
+import React from 'react';
 import { Input } from '@nextui-org/react';
 import messages from '../../../api/messages/messages.json';
 
@@ -15,6 +16,8 @@ const QuizSearchInput: React.FC<QuizSearchInputProps> = ({
       value={value || ''}
       onChange={e => setValue(e.currentTarget.value)}
       label={messages.quizName}
+      isClearable
+      onClear={() => setValue('')}
       className="max-w-xs"
     >
       QuizSearchInput

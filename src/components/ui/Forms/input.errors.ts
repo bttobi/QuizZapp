@@ -11,3 +11,18 @@ export const passwordErrors = (val: string) => {
   if (!/[0-9]/.test(val)) return messages.passwordDigit;
   if (!/[^a-zA-Z0-9]/.test(val)) return messages.passwordSpecial;
 };
+
+export const quizNameErrors = (val: string) => {
+  if (val.length < 4) return messages.quizNameLengthError;
+  if (val.length > 50) return messages.quizNameLengthError;
+};
+
+export const quizThumbnailErrors = (val: string) => {
+  if (
+    !/^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+(?:png|jpg|jpeg|gif|svg)+$/.test(
+      val
+    ) &&
+    val !== ''
+  )
+    return messages.thumbnailLinkError;
+};

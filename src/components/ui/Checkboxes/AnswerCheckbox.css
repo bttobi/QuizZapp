@@ -1,9 +1,0 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-label:has(input[type='radio']:checked) {
-  transition: all 150ms ease-in-out;
-  outline: 10px solid hsl(146 79% 44%);
-  color: hsl(146 79% 44%);
-}

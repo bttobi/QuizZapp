@@ -1,27 +1,29 @@
 import React, { useState } from 'react';
-import { Question } from '../../../api/types/quiz.types';
-import { Button, Image, Progress } from '@nextui-org/react';
+import { Question, UserAnswer } from '../../../api/types/quiz.types';
+import { Button, Progress, Image } from '@nextui-org/react';
 import messages from '../../../api/messages/messages.json';
 import Answers from './Answers';
-import { useNavigate, useParams } from 'react-router-dom';
 import emitNotification, {
   NotificationType,
 } from '../Notifications/emitNotification';
-import { useGetResults } from '../../../api/hooks/quiz.hooks';
+import {
+  useGetCorrectAnswers,
+  usePostAnswers,
+} from '../../../api/hooks/quiz.hooks';
 import ResultsModal from '../Modals/ResultsModal';
+import Confetti from 'react-confetti';
+import { isCorrectlyAnswered } from '../../../helpers/correctAnswers';
 
 interface QuizBodyProps {
   questions: Question[];
 }
 
 const QuizBody: React.FC<QuizBodyProps> = ({ questions }) => {
-  const { quizID, questionNumber } = useParams();
-  const { resultsData, getResults, isPending } = useGetResults();
-  const navigate = useNavigate();
-  const [questionNumberState, setQuestionNumberState] = useState<number>(
-    Number(questionNumber || 0)
-  );
-  const [userAnswers, setUserAnswers] = useState<string[]>([]);
+  const { correctAnswersData, getCorrectAnswers, isPending } =
+    useGetCorrectAnswers();
+  const { postAnswers } = usePostAnswers();
+  const [questionNumberState, setQuestionNumberState] = useState<number>(0);
+  const [userAnswers, setUserAnswers] = useState<UserAnswer[]>([]);
   const nextDisabled = !userAnswers[questionNumberState];
   const numberQuestionsMessage = `${messages.question} ${
     questionNumberState + 1
@@ -39,18 +41,38 @@ const QuizBody: React.FC<QuizBodyProps> = ({ questions }) => {
       return;
     }
     if (!isLastQuestion) {
-      setQuestionNumberState(prevState => {
-        const newQuestioNumber = prevState + 1;
-        navigate(`/quiz/${quizID}/${newQuestioNumber}`);
-        return newQuestioNumber;
-      });
+      setQuestionNumberState(prevState => prevState + 1);
       return;
     }
-    getResults(userAnswers);
+    getCorrectAnswers().then(res => {
+      const userCorrectAnswers: number[] = userAnswers
+        .filter(el =>
+          isCorrectlyAnswered(res.data || [], userAnswers, el.question_id)
+        )
+        .map(el => el.question_id);
+      const userWrongAnswers: number[] = userAnswers
+        .filter(
+          el =>
+            !isCorrectlyAnswered(res.data || [], userAnswers, el.question_id)
+        )
+        .map(el => el.question_id);
+      postAnswers({
+        correctAnswers: userCorrectAnswers,
+        wrongAnswers: userWrongAnswers,
+      });
+    });
   };
-  console.log(resultsData);
-  return resultsData ? (
-    <ResultsModal userAnswers={userAnswers} questions={questions} />
+
+  return correctAnswersData ? (
+    <>
+      <Confetti
+        className="z-50"
+        recycle={false}
+        numberOfPieces={1000}
+        gravity={0.05}
+      />
+      <ResultsModal userAnswers={userAnswers} questions={questions} />
+    </>
   ) : (
     <>
       <section className="flex sm:gap-10 gap-2 flex-col justify-between align-center items-center bg-primary w-5/6 rounded-lg">
@@ -58,12 +80,13 @@ const QuizBody: React.FC<QuizBodyProps> = ({ questions }) => {
         <p className="text-lg">{numberQuestionsMessage}</p>
         {/* <Image
           className="sm:w-96 w-64"
-          src={
-            'https://cdn.cloudflare.steamstatic.com/steam/apps/322170/capsule_616x353.jpg?t=1703006148'
-          }
+          src="https://cdn.cloudflare.steamstatic.com/steam/apps/322170/capsule_616x353.jpg?t=1703006148"
         /> */}
-        <p className="text-3xl sm:mb-0 mb-4">{currentQuestion.question}</p>
+        <p className="text-3xl sm:mb-0 mb-4 text-center">
+          {currentQuestion.question}
+        </p>
         <Answers
+          questionID={currentQuestion.question_id}
           questionNumber={questionNumberState}
           setUserAnswers={setUserAnswers}
           answers={currentQuestion.answers}

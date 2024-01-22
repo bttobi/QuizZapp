@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   Button,
   Navbar,
@@ -5,9 +6,9 @@ import {
   NavbarContent,
   NavbarMenu,
   NavbarMenuToggle,
+  useDisclosure,
 } from '@nextui-org/react';
 import { FaSignOutAlt } from 'react-icons/fa';
-import { useState } from 'react';
 import QuizZappLogo from '../Logo/QuizZappLogo';
 import NavigationLink from './NavigationLink';
 import { RouteType } from '../../../appRoutes.routes';
@@ -22,19 +23,20 @@ interface NavigationBarProps {
 }
 
 const NavigationBar: React.FC<NavigationBarProps> = ({ items }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const { isOpen, onOpenChange } = useDisclosure();
   const { signOut } = useSignOutUser();
   const { isSignedIn } = useUser();
 
   return (
     <Navbar
-      onMenuOpenChange={setIsMenuOpen}
+      isMenuOpen={isOpen}
+      onMenuOpenChange={onOpenChange}
       className="bottom-auto bg-backgroundSecondary w-full"
       maxWidth="full"
     >
       <NavbarContent>
         <NavbarMenuToggle
-          aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+          aria-label={isOpen ? 'Close menu' : 'Open menu'}
           className="md:hidden"
         />
         <NavbarBrand>
@@ -42,13 +44,13 @@ const NavigationBar: React.FC<NavigationBarProps> = ({ items }) => {
             className="flex justify-center align-center items-center hover:scale-105 ease-in-out duration-200"
             to="/"
           >
-            <QuizZappLogo />
+            <QuizZappLogo width={'35px'} height={'35px'} />
             <p className="font-bold text-xl sm:text-lg">QuizZapp</p>
           </NavLink>
         </NavbarBrand>
       </NavbarContent>
       <NavbarContent
-        className="hidden md:flex justify-center items-center align-center gap-2 md:gap-10"
+        className="hidden md:flex vitems-center align-center gap-2 md:gap-8 md:mx-5"
         justify="center"
       >
         {items.map(el => (
@@ -58,7 +60,7 @@ const NavigationBar: React.FC<NavigationBarProps> = ({ items }) => {
           </NavigationLink>
         ))}
       </NavbarContent>
-      <NavbarContent justify="end" className="hidden md:flex">
+      <NavbarContent justify="end" className="w-min">
         {isSignedIn ? (
           <ProfileDropdown />
         ) : (
@@ -76,19 +78,28 @@ const NavigationBar: React.FC<NavigationBarProps> = ({ items }) => {
           </>
         )}
       </NavbarContent>
-      <NavbarMenu className="bg-background/20">
+      <NavbarMenu className="bg-background/70 pt-8">
         {items.map(el => (
           <NavigationLink key={`${el.path}-${el.name}`} path={el.path}>
             {el.icon && <span className="text-white mr-2">{el.icon}</span>}
-            <span className="text-white">{el.name}</span>
+            <span onClick={() => onOpenChange()} className="text-white">
+              {el.name}
+            </span>
           </NavigationLink>
         ))}
         {isSignedIn && (
-          <NavigationLink color="danger">
-            <span className="mr-2">
+          <NavigationLink onClick={() => onOpenChange()} color="danger">
+            <span onClick={() => onOpenChange()} className="mr-2">
               <FaSignOutAlt />
             </span>
-            <span onClick={() => signOut()}>Sign out</span>
+            <span
+              onClick={() => {
+                onOpenChange();
+                signOut();
+              }}
+            >
+              Sign out
+            </span>
           </NavigationLink>
         )}
       </NavbarMenu>

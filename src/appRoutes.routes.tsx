@@ -6,20 +6,26 @@ import { FaSignInAlt } from 'react-icons/fa';
 import { FaHome } from 'react-icons/fa';
 import { IoPersonCircleOutline } from 'react-icons/io5';
 import { RequireAuth } from 'react-auth-kit';
+import { MdQuiz } from 'react-icons/md';
 import messages from './api/messages/messages.json';
 
 import {
-  CreatePage,
+  QuizCreatePage,
   ExplorePage,
   HomePage,
   LeaderboardPage,
   SignInPage,
   SignUpPage,
   QuizPage,
+  UserQuizzesPage,
+  QuizEditPage,
+  QuestionEditPage,
+  QuestionsEditPage,
+  UserProfilePage,
 } from './pages';
 
 export interface RouteType {
-  readonly name: string;
+  readonly name?: string;
   readonly path: string;
   readonly element: ReactNode;
   readonly isNavVisible: boolean;
@@ -42,7 +48,7 @@ const routes: RouteType[] = [
     name: messages.explore,
     path: '/explore',
     element: (
-      <RequireAuth loginPath={'/signin'}>
+      <RequireAuth loginPath="/signin">
         <ExplorePage />
       </RequireAuth>
     ),
@@ -53,8 +59,8 @@ const routes: RouteType[] = [
     name: messages.create,
     path: '/create',
     element: (
-      <RequireAuth loginPath={'/signin'}>
-        <CreatePage />
+      <RequireAuth loginPath="/signin">
+        <QuizCreatePage />
       </RequireAuth>
     ),
     isNavVisible: true,
@@ -82,11 +88,57 @@ const routes: RouteType[] = [
     icon: <IoPersonCircleOutline />,
   },
   {
-    name: messages.quiz,
-    path: '/quiz/:quizID/:questionNumber',
+    path: '/quiz/:quizID',
     element: (
-      <RequireAuth loginPath={'/signin'}>
+      <RequireAuth loginPath="/signin">
         <QuizPage />
+      </RequireAuth>
+    ),
+    isNavVisible: false,
+  },
+  {
+    name: messages.myQuizzes,
+    path: '/quizzes',
+    element: (
+      <RequireAuth loginPath="/signin">
+        <UserQuizzesPage />
+      </RequireAuth>
+    ),
+    isNavVisible: true,
+    icon: <MdQuiz />,
+  },
+  {
+    path: '/quiz/edit/:quizID',
+    element: (
+      <RequireAuth loginPath="/signin">
+        <QuizEditPage />
+      </RequireAuth>
+    ),
+    isNavVisible: false,
+  },
+  {
+    path: '/questions/edit/:quizID',
+    element: (
+      <RequireAuth loginPath="/signin">
+        <QuestionsEditPage />
+      </RequireAuth>
+    ),
+    isNavVisible: false,
+  },
+  {
+    path: '/question/edit/:questionID',
+    element: (
+      <RequireAuth loginPath="/signin">
+        <QuestionEditPage />
+      </RequireAuth>
+    ),
+    isNavVisible: false,
+  },
+  {
+    path: '/profile/:userID',
+    element: (
+      <RequireAuth loginPath="/signin">
+        <UserProfilePage />
       </RequireAuth>
     ),
     isNavVisible: false,
