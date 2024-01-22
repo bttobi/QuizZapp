@@ -44,7 +44,7 @@ const UserProfilePage = () => {
           >
             <span
               //@ts-ignore
-              style={{ textWrap: 'wrap', wordBreak: 'break-all' }}
+              style={{ textWrap: 'wrap', wordBreak: 'break-word' }}
               className="text-3xl bg-background p-4 rounded-lg"
             >{`${userScoresData?.email} ${messages.profileStats}`}</span>
             {!Object.keys(userScoresData).length ? (

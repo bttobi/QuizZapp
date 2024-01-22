@@ -1,4 +1,3 @@
-import React from 'react';
 import { Button } from '@nextui-org/react';
 import EmailInput from '../Inputs/EmailInput';
 import PasswordInput from '../Inputs/PasswordInput';

@@ -143,6 +143,11 @@ const routes: RouteType[] = [
     ),
     isNavVisible: false,
   },
+  {
+    path: '*',
+    element: <HomePage />,
+    isNavVisible: false,
+  },
 ];
 
 export default routes;

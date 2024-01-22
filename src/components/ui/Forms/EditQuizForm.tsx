@@ -1,4 +1,3 @@
-import React from 'react';
 import { useForm } from 'react-hook-form';
 import { QuizInputs } from './input.types';
 import { useEditQuiz, useGetQuizToEdit } from '../../../api/hooks/quiz.hooks';

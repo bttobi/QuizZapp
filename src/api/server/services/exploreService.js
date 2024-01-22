@@ -1,4 +1,4 @@
-import client from "../setup/dbSetup.js";
+import client from '../setup/dbSetup.js';
 
 const getQuizzes = async (req, res, next) => {
   try {
@@ -7,9 +7,9 @@ const getQuizzes = async (req, res, next) => {
 
     const offset = (page - 1) * 12;
 
-    const nfilter = `%${namefilter || ""}%`;
-    const cfilter = `%${categoryfilter || ""}%`;
-    const ufilter = `%${userfilter || ""}%`;
+    const nfilter = `%${namefilter || ''}%`;
+    const cfilter = `%${categoryfilter || ''}%`;
+    const ufilter = `%${userfilter || ''}%`;
 
     const { rows } = await client.query(
       `select quiz_id, quiz_name, 
@@ -23,8 +23,8 @@ const getQuizzes = async (req, res, next) => {
       and (select email from users where user_id=a.user_id) like $4
       ${
         !userfilter
-          ? "and (select count(*) from questions where quiz_id=a.quiz_id)>0"
-          : ""
+          ? 'and (select count(*) from questions where quiz_id=a.quiz_id)>0'
+          : ''
       }
       limit 12
       offset $3`,

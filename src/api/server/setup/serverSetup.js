@@ -9,7 +9,7 @@ import initializeJWT from '../passports/passportJWTConfig.js';
 
 config.configDotenv();
 
-const PORT = process.env.VITE_SERVER_PORT || 8080;
+const PORT = process.env.VITE_SERVER_PORT || '';
 
 const app = express();
 app.use(

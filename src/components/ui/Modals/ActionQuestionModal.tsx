@@ -124,6 +124,8 @@ const ActionQuestionModal: React.FC<ActionQuestionModalProps> = ({
     }
   }, [watchedFields, clearErrors, correctAnswer]);
 
+  console.log(questionAnswers?.[0]);
+
   return (
     <ConfirmationModal
       isOpen={isOpen}

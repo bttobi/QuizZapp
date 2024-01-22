@@ -19,24 +19,33 @@ const LeaderBoardList = () => {
         <div className="text-3xl mt-4 text-center mb-8">
           {messages.bestPlayers}
         </div>
-        <LeaderBoardListHeader fields={fields} />
-        {leaderboard?.map((data, index) => (
-          <LeaderboardCard
-            key={data.email}
-            data={data}
-            isLast={leaderboard.length - 1 === index}
-          />
-        ))}
+        {!leaderboard?.length ? (
+          <span className="flex justify-center">{messages.noData}</span>
+        ) : (
+          <>
+            {' '}
+            <LeaderBoardListHeader fields={fields} />
+            {leaderboard?.map((data, index) => (
+              <LeaderboardCard
+                key={data.email}
+                data={data}
+                isLast={leaderboard.length - 1 === index}
+              />
+            ))}
+          </>
+        )}
       </ul>
-      <Pagination
-        className="fixed sm:bottom-10 bottom-2 z-20 bg-primary rounded-lg"
-        showControls
-        loop
-        color="secondary"
-        total={Math.ceil((leaderboardCount || 1) / 100)}
-        initialPage={page}
-        onChange={page => setPage(page)}
-      />
+      {leaderboardCount && Number(leaderboardCount) !== 0 && (
+        <Pagination
+          className="fixed sm:bottom-10 bottom-2 z-20 bg-primary rounded-lg"
+          showControls
+          loop
+          color="secondary"
+          total={Math.ceil((leaderboardCount || 1) / 100)}
+          initialPage={page}
+          onChange={page => leaderboardCount && setPage(page)}
+        />
+      )}
     </>
   );
 };

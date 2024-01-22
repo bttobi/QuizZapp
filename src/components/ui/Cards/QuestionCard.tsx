@@ -97,19 +97,21 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
           </Button>
         </div>
       </motion.div>
-      <ActionQuestionModal
-        modalTitle={messages.editQuestionAction}
-        actionTitle={messages.editQuestionAction}
-        questionName={questionName}
-        questionAnswers={questionData?.answers}
-        questionCorrectAnswer={questionData?.correct_answer}
-        questionID={questionID}
-        actionFn={editQuestion}
-        isActionPending={isEditPending}
-        isOpen={isEditOpen}
-        onOpenChange={onEditOpenChange}
-        isBodyLoading={isFetching}
-      />
+      {!isFetching && questionData && (
+        <ActionQuestionModal
+          modalTitle={messages.editQuestionAction}
+          actionTitle={messages.editQuestionAction}
+          questionName={questionName}
+          questionAnswers={questionData?.answers}
+          questionCorrectAnswer={questionData?.correct_answer}
+          questionID={questionID}
+          actionFn={editQuestion}
+          isActionPending={isEditPending}
+          isOpen={isEditOpen}
+          onOpenChange={onEditOpenChange}
+          isBodyLoading={isFetching}
+        />
+      )}
     </>
   );
 };

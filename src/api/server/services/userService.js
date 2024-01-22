@@ -1,14 +1,14 @@
-import passport from "passport";
-import jwtToken from "../helpers/jwtHelper.js";
-import client from "../setup/dbSetup.js";
-import bcrypt from "bcrypt";
+import passport from 'passport';
+import jwtToken from '../helpers/jwtHelper.js';
+import client from '../setup/dbSetup.js';
+import bcrypt from 'bcrypt';
 
 const signIn = (req, res, next) => {
-  passport.authenticate("local", { session: false }, (error, user, info) => {
+  passport.authenticate('local', { session: false }, (error, user, info) => {
     if (error) return res.status(500).json({ error });
 
     const token = jwtToken({ userID: user.user_id, userEmail: user.email });
-    res.cookie("jwt_token", token, { httpOnly: true });
+    res.cookie('jwt_token', token, { httpOnly: true });
     return res
       .status(200)
       .json({ email: user.email, userID: user.user_id, token });
@@ -41,7 +41,7 @@ const signUp = async (req, res, next) => {
       [email]
     );
     if (rows.length > 0) {
-      return res.status(500).json({ error: "EMAIL_ALR_IN_USE" });
+      return res.status(500).json({ error: 'EMAIL_ALR_IN_USE' });
     }
     const hashedPassword = await bcrypt.hash(password, 10);
     await client.query(`INSERT INTO users (email, password) VALUES ($1, $2)`, [
@@ -57,19 +57,19 @@ const signUp = async (req, res, next) => {
 
 const signOut = (req, res, next) => {
   try {
-    res.clearCookie("jwt_token");
-    return res.status(200).json({ message: "User signed out successfully" });
+    res.clearCookie('jwt_token');
+    return res.status(200).json({ message: 'User signed out successfully' });
   } catch (error) {
-    return res.status(500).json({ error: "GENERAL_ERROR" });
+    return res.status(500).json({ error: 'GENERAL_ERROR' });
   }
 };
 
 const getToken = (req, res, next) => {
   const user = req.user;
-  if (!user) console.log("NO USER");
+  if (!user) console.log('NO USER');
 
   const token = jwtToken({ userID: user.id, userEmail: user.email });
-  res.cookie("jwt_token", token);
+  res.cookie('jwt_token', token);
   return res.status(200).json({ token });
 };
 

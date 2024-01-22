@@ -28,7 +28,7 @@ const ResultsModal: React.FC<ResultsPageProps> = ({
       defaultOpen
       hideCloseButton
       isDismissable={false}
-      className="items-center absolute"
+      className="items-center absolute w-full"
     >
       <ModalContent className="sm:top-12 top-0 sm:rounded-lg rounded-none sm:m-1 m-0">
         <ModalHeader>{messages.results}</ModalHeader>

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Question, UserAnswer } from '../../../api/types/quiz.types';
-import { Button, Progress, Image } from '@nextui-org/react';
+import { Button, Progress } from '@nextui-org/react';
 import messages from '../../../api/messages/messages.json';
 import Answers from './Answers';
 import emitNotification, {
