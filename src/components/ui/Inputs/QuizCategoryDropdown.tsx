@@ -12,7 +12,7 @@ interface QuizCategoryDropdownProps {
   error?: string;
   variant?: 'flat' | 'faded' | 'bordered' | 'underlined';
   className?: string;
-  onSelectionChange: (key: Key) => any;
+  onSelectionChange: (key: Key) => void;
 }
 
 const QuizCategoryDropdown: React.FC<QuizCategoryDropdownProps> = ({

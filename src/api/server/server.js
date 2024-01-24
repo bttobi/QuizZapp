@@ -1,13 +1,11 @@
 import app from './setup/serverSetup.js';
-import client from './setup/dbSetup.js';
-import jwtToken from './helpers/jwtHelper.js';
-import bcrypt from 'bcrypt';
 import passport from 'passport';
 import userService from './services/userService.js';
 import exploreService from './services/exploreService.js';
 import quizService from './services/quizService.js';
 import leaderboardService from './services/leaderboardService.js';
 import scoresService from './services/scoresService.js';
+
 /*
  ******************************************************
  ***********************USER***************************
@@ -146,7 +144,7 @@ app.post(
     quizService.postResults(req, res, next);
   }
 );
-/*
+
 /*
  ******************************************************
  *********************LEADERBOARD**********************
@@ -156,6 +154,7 @@ app.post(
 app.get('/leaderboard/:page', (req, res, next) => {
   leaderboardService.getLeaderboard(req, res, next);
 });
+
 /*
  ******************************************************
  **********************SCORES**************************

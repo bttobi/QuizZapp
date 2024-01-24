@@ -1,0 +1,21 @@
+{
+  "quizzes": [
+    {
+      "quiz_id": "1",
+      "quiz_name": "Cooking",
+      "author": "test@gmail.com",
+      "category": "FOOD",
+      "thumbnail_src": "https://pbs.twimg.com/profile_images/1443921741328359461/B6z3_oN3_400x400.jpg",
+      "question_count": "4"
+    },
+    {
+      "quiz_id": "2",
+      "quiz_name": "My test",
+      "author": "test@gmail.com",
+      "category": "SCIENCE",
+      "thumbnail_src": "https://i.imgur.com/CZaDkUQ.png",
+      "question_count": "1"
+    }
+  ],
+  "quizzes_count": "2"
+}

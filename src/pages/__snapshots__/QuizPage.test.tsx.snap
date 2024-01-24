@@ -1,0 +1,310 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`QuizPage component > matches snapshot 1`] = `
+<div>
+  <div
+    class="w-full h-full flex flex-col align-center justify-start mt-12 items-center"
+    style="opacity: 0;"
+  >
+    <section
+      class="flex sm:gap-10 gap-2 flex-col justify-between align-center items-center bg-primary w-5/6 rounded-lg"
+    >
+      <div
+        aria-valuemax="100"
+        aria-valuemin="0"
+        aria-valuenow="50"
+        aria-valuetext="50%"
+        class="flex flex-col gap-2 w-full"
+        id="react-aria-:r2k:"
+        role="progressbar"
+      >
+        <div
+          class="z-0 relative bg-default-300/50 overflow-hidden h-3 rounded-full"
+        >
+          <div
+            class="h-full bg-secondary rounded-full transition-transform !duration-500"
+            style="transform: translateX(-100%);"
+          />
+        </div>
+      </div>
+      <span
+        class="text-lg"
+        style="word-break: break-word; hyphens: auto;"
+      >
+        Question 1 of 2
+      </span>
+      <p
+        class="text-3xl sm:mb-0 mb-4 text-center"
+        style="word-break: break-word; hyphens: auto;"
+      >
+        Next question but this time in english
+      </p>
+      <div
+        aria-label=" "
+        aria-orientation="vertical"
+        class="relative flex flex-col gap-4 sm:mb-10 mb-4 w-full auto-cols-max sm:px-10 px-4"
+        id="react-aria-:r2n:"
+        role="radiogroup"
+      >
+        <div
+          class="flex flex-col flex-wrap gap-2 data-[orientation=horizontal]:flex-row"
+          data-orientation="vertical"
+          role="presentation"
+        >
+          <label
+            for="answer-0"
+            id="answerCheckbox"
+          >
+            <label
+              class="group relative justify-start tap-highlight-transparent flex m-0 bg-background hover:bg-backgroundSecondary items-center sm:w-full sm:py-6 max-w-full w-full cursor-pointer rounded-lg gap-4 p-4 border-2 data-[selected=true]:border-secondary"
+              name="answer-0"
+              type="radio"
+            >
+              <div
+                style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+              >
+                <input
+                  aria-describedby="react-aria-:r2q:"
+                  aria-labelledby=":r2t:"
+                  id="answer-0"
+                  name="react-aria-:r2s:"
+                  tabindex="0"
+                  type="radio"
+                  value="Good one"
+                />
+              </div>
+              <span
+                aria-hidden="true"
+                class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-secondary w-6 h-6 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none"
+              >
+                <span
+                  class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 bg-secondary text-secondary-foreground w-2.5 h-2.5 transition-transform-opacity motion-reduce:transition-none"
+                />
+              </span>
+              <div
+                class="flex flex-col ml-2"
+              >
+                <span
+                  class="relative text-foreground select-none text-large transition-colors motion-reduce:transition-none"
+                  id=":r2t:"
+                >
+                  <p
+                    class="flex justify-center align-center items-center break-words"
+                  >
+                    <span
+                      class="mr-4 sm:text-2xl rounded-full px-2"
+                    >
+                      A
+                    </span>
+                    <span
+                      class="text-lg"
+                      style="text-wrap: wrap; word-break: break-word; hyphens: auto;"
+                    >
+                      Good one
+                    </span>
+                  </p>
+                </span>
+              </div>
+            </label>
+          </label>
+          <label
+            for="answer-1"
+            id="answerCheckbox"
+          >
+            <label
+              class="group relative justify-start tap-highlight-transparent flex m-0 bg-background hover:bg-backgroundSecondary items-center sm:w-full sm:py-6 max-w-full w-full cursor-pointer rounded-lg gap-4 p-4 border-2 data-[selected=true]:border-secondary"
+              name="answer-1"
+              type="radio"
+            >
+              <div
+                style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+              >
+                <input
+                  aria-describedby="react-aria-:r2q:"
+                  aria-labelledby=":r2u:"
+                  id="answer-1"
+                  name="react-aria-:r2s:"
+                  tabindex="0"
+                  type="radio"
+                  value="Good job"
+                />
+              </div>
+              <span
+                aria-hidden="true"
+                class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-secondary w-6 h-6 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none"
+              >
+                <span
+                  class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 bg-secondary text-secondary-foreground w-2.5 h-2.5 transition-transform-opacity motion-reduce:transition-none"
+                />
+              </span>
+              <div
+                class="flex flex-col ml-2"
+              >
+                <span
+                  class="relative text-foreground select-none text-large transition-colors motion-reduce:transition-none"
+                  id=":r2u:"
+                >
+                  <p
+                    class="flex justify-center align-center items-center break-words"
+                  >
+                    <span
+                      class="mr-4 sm:text-2xl rounded-full px-2"
+                    >
+                      B
+                    </span>
+                    <span
+                      class="text-lg"
+                      style="text-wrap: wrap; word-break: break-word; hyphens: auto;"
+                    >
+                      Good job
+                    </span>
+                  </p>
+                </span>
+              </div>
+            </label>
+          </label>
+          <label
+            for="answer-2"
+            id="answerCheckbox"
+          >
+            <label
+              class="group relative justify-start tap-highlight-transparent flex m-0 bg-background hover:bg-backgroundSecondary items-center sm:w-full sm:py-6 max-w-full w-full cursor-pointer rounded-lg gap-4 p-4 border-2 data-[selected=true]:border-secondary"
+              name="answer-2"
+              type="radio"
+            >
+              <div
+                style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+              >
+                <input
+                  aria-describedby="react-aria-:r2q:"
+                  aria-labelledby=":r2v:"
+                  id="answer-2"
+                  name="react-aria-:r2s:"
+                  tabindex="0"
+                  type="radio"
+                  value="Hehehe"
+                />
+              </div>
+              <span
+                aria-hidden="true"
+                class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-secondary w-6 h-6 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none"
+              >
+                <span
+                  class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 bg-secondary text-secondary-foreground w-2.5 h-2.5 transition-transform-opacity motion-reduce:transition-none"
+                />
+              </span>
+              <div
+                class="flex flex-col ml-2"
+              >
+                <span
+                  class="relative text-foreground select-none text-large transition-colors motion-reduce:transition-none"
+                  id=":r2v:"
+                >
+                  <p
+                    class="flex justify-center align-center items-center break-words"
+                  >
+                    <span
+                      class="mr-4 sm:text-2xl rounded-full px-2"
+                    >
+                      C
+                    </span>
+                    <span
+                      class="text-lg"
+                      style="text-wrap: wrap; word-break: break-word; hyphens: auto;"
+                    >
+                      Hehehe
+                    </span>
+                  </p>
+                </span>
+              </div>
+            </label>
+          </label>
+          <label
+            for="answer-3"
+            id="answerCheckbox"
+          >
+            <label
+              class="group relative justify-start tap-highlight-transparent flex m-0 bg-background hover:bg-backgroundSecondary items-center sm:w-full sm:py-6 max-w-full w-full cursor-pointer rounded-lg gap-4 p-4 border-2 data-[selected=true]:border-secondary"
+              name="answer-3"
+              type="radio"
+            >
+              <div
+                style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+              >
+                <input
+                  aria-describedby="react-aria-:r2q:"
+                  aria-labelledby=":r30:"
+                  id="answer-3"
+                  name="react-aria-:r2s:"
+                  tabindex="0"
+                  type="radio"
+                  value="I dont care"
+                />
+              </div>
+              <span
+                aria-hidden="true"
+                class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden border-solid border-medium box-border border-default rounded-full group-data-[hover-unselected=true]:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background group-data-[selected=true]:border-secondary w-6 h-6 group-data-[pressed=true]:scale-95 transition-transform-colors motion-reduce:transition-none"
+              >
+                <span
+                  class="z-10 opacity-0 scale-0 origin-center rounded-full group-data-[selected=true]:opacity-100 group-data-[selected=true]:scale-100 bg-secondary text-secondary-foreground w-2.5 h-2.5 transition-transform-opacity motion-reduce:transition-none"
+                />
+              </span>
+              <div
+                class="flex flex-col ml-2"
+              >
+                <span
+                  class="relative text-foreground select-none text-large transition-colors motion-reduce:transition-none"
+                  id=":r30:"
+                >
+                  <p
+                    class="flex justify-center align-center items-center break-words"
+                  >
+                    <span
+                      class="mr-4 sm:text-2xl rounded-full px-2"
+                    >
+                      D
+                    </span>
+                    <span
+                      class="text-lg"
+                      style="text-wrap: wrap; word-break: break-word; hyphens: auto;"
+                    >
+                      I dont care
+                    </span>
+                  </p>
+                </span>
+              </div>
+            </label>
+          </label>
+        </div>
+      </div>
+    </section>
+    <button
+      class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-unit-6 min-w-unit-24 h-unit-12 text-medium gap-unit-3 rounded-large opacity-disabled pointer-events-none [&>svg]:max-w-[theme(spacing.unit-8)] data-[pressed=true]:scale-[0.97] transition-transform-colors-opacity motion-reduce:transition-none bg-default data-[hover=true]:opacity-hover mt-4 text-white"
+      data-disabled="true"
+      data-loading="true"
+      disabled=""
+      type="button"
+    >
+      <div
+        aria-label="Loading"
+        class="relative inline-flex flex-col gap-2 items-center justify-center"
+      >
+        <div
+          class="relative flex w-8 h-8"
+        >
+          <i
+            class="absolute w-full h-full rounded-full animate-spinner-ease-spin border-solid border-t-transparent border-l-transparent border-r-transparent border-3 border-b-current"
+          />
+          <i
+            class="absolute w-full h-full rounded-full opacity-75 animate-spinner-linear-spin border-dotted border-t-transparent border-l-transparent border-r-transparent border-3 border-b-current"
+          />
+        </div>
+      </div>
+      Next
+    </button>
+  </div>
+  <div
+    class="Toastify"
+  />
+</div>
+`;

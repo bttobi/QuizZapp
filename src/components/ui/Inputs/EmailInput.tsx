@@ -8,6 +8,7 @@ import { Inputs } from '../Forms/input.types';
 
 interface EmailInputProps extends InputProps {
   error: string | undefined;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   control: Control<Inputs, any>;
 }
 

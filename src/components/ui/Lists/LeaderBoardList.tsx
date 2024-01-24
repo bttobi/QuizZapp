@@ -12,10 +12,15 @@ const LeaderBoardList = () => {
   const fields = [messages.place, messages.user, messages.score];
 
   return isFetching ? (
-    <Spinner size="lg" color="white" className="absolute left-1/2 bottom-1/2" />
+    <Spinner
+      data-testid="spinner"
+      size="lg"
+      color="white"
+      className="absolute bottom-1/2"
+    />
   ) : (
     <>
-      <ul className="mt-12 bg-backgroundSecondary h-max-3/4 px-8 pb-8 pt-2 rounded-lg">
+      <ul className="mt-12 bg-backgroundSecondary h-max-3/4 px-8 pb-8 pt-2 rounded-lg sm:w-1/2">
         <div className="text-3xl mt-4 text-center mb-8">
           {messages.bestPlayers}
         </div>
@@ -23,7 +28,6 @@ const LeaderBoardList = () => {
           <span className="flex justify-center">{messages.noData}</span>
         ) : (
           <>
-            {' '}
             <LeaderBoardListHeader fields={fields} />
             {leaderboard?.map((data, index) => (
               <LeaderboardCard
@@ -37,11 +41,11 @@ const LeaderBoardList = () => {
       </ul>
       {leaderboardCount && Number(leaderboardCount) !== 0 && (
         <Pagination
-          className="fixed sm:bottom-10 bottom-2 z-20 bg-primary rounded-lg"
+          className="fixed sm:bottom-10 bottom-6 z-20 bg-primary rounded-lg"
           showControls
           loop
           color="secondary"
-          total={Math.ceil((leaderboardCount || 1) / 100)}
+          total={Math.ceil((leaderboardCount || 1) / 10)}
           initialPage={page}
           onChange={page => leaderboardCount && setPage(page)}
         />

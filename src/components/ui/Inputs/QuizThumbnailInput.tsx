@@ -8,6 +8,7 @@ import { quizThumbnailErrors } from '../Forms/input.errors';
 
 interface QuizThumbnailInputProps extends InputProps {
   error: string | undefined;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   control: Control<QuizInputs, any>;
   resetField: UseFormResetField<QuizInputs>;
 }

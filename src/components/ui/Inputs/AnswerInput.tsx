@@ -8,6 +8,7 @@ import { QuestionInputs } from '../Forms/input.types';
 interface AnswerInputProps extends InputProps {
   error: string | undefined;
   answerNumber: number;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   control: Control<QuestionInputs, any>;
 }
 

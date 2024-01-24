@@ -4,7 +4,7 @@ import { refreshUserTokenRoute } from '../routes/user.routes';
 
 const refreshToken = createRefresh({
   interval: 3,
-  //@ts-ignore
+  //@ts-expect-error this is needed because of react-auth-kit not parsing types correctly
   refreshApiCallback: async ({ refreshToken }) => {
     try {
       const res = await axios.post(

@@ -67,7 +67,7 @@
   "thumbnailLinkError": "Provide a correct link",
   "createQuizError": "Error while creating the quiz, try again later",
   "createQuizSuccess": "Created new quiz successfully",
-  "bestPlayers": "Best quiz masters",
+  "bestPlayers": "Best Quiz Masters",
   "myQuizzes": "My quizzes",
   "delete": "Delete",
   "sureDelete": "Are you sure to delete selected quizzes?",
@@ -130,5 +130,6 @@
   "createdQuestionsCount": "Overall questions",
   "allUsersAttemptsCount": "All users attempts count",
   "allGoodAnswersCount": "Questions answered right count",
-  "allBadAnswersCount": "Questions answered wrong count"
+  "allBadAnswersCount": "Questions answered wrong count",
+  "noQuestionsYet": "No questions yet"
 }

@@ -1,0 +1,85 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`UserProfilePage component > matches snapshot 1`] = `
+<div>
+  <div
+    class="w-full h-full flex flex-col justify-start items-center align-center"
+    style="opacity: 0;"
+  >
+    <section
+      class="flex flex-col gap-4 bg-primary/70 rounded-lg p-4 text-lg text-white mt-8 text-center mx-4 mb-8"
+      style="transform: translateY(50rem) translateZ(0);"
+    >
+      <p
+        class="text-3xl bg-background py-4 px-1 rounded-lg flex flex-col"
+        style="text-wrap: wrap;"
+      >
+        <span
+          class="text-2xl"
+        >
+          student
+        </span>
+        <span
+          class="text-2xl"
+        >
+          profile stats
+        </span>
+      </p>
+      <span>
+        All attempts count: 12
+      </span>
+      <span>
+        Number of created quizzes: 2
+      </span>
+      <span>
+        Most attempted quiz: Moj test
+      </span>
+      <span>
+        Highest quiz attempts: 7
+      </span>
+      <span>
+        Overall proficiency: 83.33%
+      </span>
+      <span
+        class="text-success"
+      >
+        Best quiz: Test promotora
+      </span>
+      <span
+        class="text-success"
+      >
+        Best proficiency in quiz: 85.71%
+      </span>
+      <span
+        class="text-success"
+      >
+        Best question: Test?
+      </span>
+      <span>
+        Users proficiency in best question: 100%
+      </span>
+      <span
+        class="text-danger"
+      >
+        Worst quiz: Testowanie
+      </span>
+      <span
+        class="text-danger"
+      >
+        Worst proficiency in quiz: 81.82%
+      </span>
+      <span
+        class="text-danger"
+      >
+        Worst question: Kolejne pytanie
+      </span>
+      <span>
+        Users proficiency in worst question: 0%
+      </span>
+    </section>
+  </div>
+  <div
+    class="Toastify"
+  />
+</div>
+`;

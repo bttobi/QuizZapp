@@ -1,0 +1,318 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`QuizEditPage component > matches snapshot 1`] = `
+<div>
+  <div
+    class="w-full h-full flex flex-col align-center items-center"
+    style="opacity: 0;"
+  >
+    <form
+      class="flex flex-col gap-4 rounded-xl px-12 py-6 bg-backgroundSecondary mb-4 mt-4 sm:mt-16 w-3/4 justify-center items-center"
+    >
+      <section
+        class="flex flex-col justify-center items-center align-center gap-4"
+      >
+        <p
+          class="text-lg font-bold text-center"
+        >
+          Submit quiz edit!
+        </p>
+        <p
+          class="text-lg font-bold text-center"
+        >
+          Current quiz name: My test
+        </p>
+        <p
+          class="text-lg font-bold text-center"
+        >
+          Current quiz category: CUSTOM
+        </p>
+        <a
+          class="relative inline-flex items-center tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-medium text-primary no-underline hover:opacity-80 active:opacity-disabled transition-opacity"
+          href="https://pbs.twimg.com/profile_images/1443921741328359461/B6z3_oN3_400x400.jpg"
+          role="link"
+          tabindex="0"
+          target="blank"
+        >
+          <p
+            class="text-lg text-center font-bold flex flex-col justify-center items-center"
+          >
+            Current quiz thumbnail 
+          </p>
+          <svg
+            class="animate-bounce text-2xl ml-2 text-white relative"
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 512 512"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M459.15 269.75a133.197 133.197 0 0 1-55.862 179.975l-42.782 22.541-10.52 5.533a71.277 71.277 0 0 1-62.966 1.685l-167.077-71.38 15.733-46.676 99.363 19.194-51.458-97.78-82.843-157.411 40.357-21.232 82.844 157.457 19.934-10.485-36.521-69.445 40.335-21.22 36.52 69.445 19.935-10.485-28.2-53.598 40.358-21.232 28.2 53.598 19.945-10.576-19.354-36.886 40.346-21.174 19.354 36.885 54.348 103.301zM73.268 146.674a60.03 60.03 0 0 1 42.361-102.459 60.098 60.098 0 0 1 56.58 80.169l10.588 20.013A78.29 78.29 0 0 0 115.708 26a78.233 78.233 0 0 0-5.635 156.262L99.428 162.02a59.688 59.688 0 0 1-26.16-15.346z"
+            />
+          </svg>
+        </a>
+      </section>
+      <div
+        class="group flex flex-col w-full is-filled"
+        data-filled="true"
+        data-filled-within="true"
+        data-has-elements="true"
+        data-has-label="true"
+        data-has-value="true"
+        data-required="true"
+        data-slot="base"
+      >
+        <div
+          class="relative w-full inline-flex tap-highlight-transparent shadow-sm px-3 bg-default-100 border-medium border-default-200 min-h-unit-10 rounded-medium flex-col items-start justify-center gap-0 transition-background !duration-150 data-[hover=true]:border-secondary focus-within:border-secondary transition-colors motion-reduce:transition-none outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background h-14 py-2 is-filled"
+          data-slot="input-wrapper"
+          style="cursor: text;"
+        >
+          <label
+            class="absolute z-10 pointer-events-none origin-top-left subpixel-antialiased block cursor-text after:content-['*'] after:text-danger after:ml-0.5 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] text-secondary group-data-[filled-within=true]:pointer-events-auto group-data-[filled-within=true]:scale-85 text-small group-data-[filled-within=true]:-translate-y-[calc(50%_+_theme(fontSize.small)/2_-_6px_-_theme(borderWidth.medium))] pe-2 max-w-full text-ellipsis overflow-hidden"
+            data-slot="label"
+            for="react-aria-:rr:"
+            id="react-aria-:rs:"
+          >
+            Quiz name
+          </label>
+          <div
+            class="inline-flex w-full items-center h-full box-border group-data-[has-label=true]:items-end"
+            data-slot="inner-wrapper"
+          >
+            <input
+              aria-label="Quiz name"
+              aria-labelledby="react-aria-:rr: react-aria-:rs:"
+              aria-required="true"
+              autocomplete="on"
+              class="w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 text-small peer pr-6 is-filled"
+              data-filled="true"
+              data-filled-within="true"
+              data-slot="input"
+              id="react-aria-:rr:"
+              name="name"
+              required=""
+              type="text"
+              value="My test"
+            />
+            <span
+              class="p-2 -m-2 z-10 hidden absolute right-3 appearance-none select-none opacity-0 hover:!opacity-100 cursor-pointer active:!opacity-70 rounded-full outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-large peer-data-[filled=true]:opacity-70 peer-data-[filled=true]:block transition-opacity motion-reduce:transition-none"
+              data-slot="clear-button"
+              role="button"
+              tabindex="0"
+            >
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                height="1em"
+                role="presentation"
+                viewBox="0 0 24 24"
+                width="1em"
+              >
+                <path
+                  d="M12 2a10 10 0 1010 10A10.016 10.016 0 0012 2zm3.36 12.3a.754.754 0 010 1.06.748.748 0 01-1.06 0l-2.3-2.3-2.3 2.3a.748.748 0 01-1.06 0 .754.754 0 010-1.06l2.3-2.3-2.3-2.3A.75.75 0 019.7 8.64l2.3 2.3 2.3-2.3a.75.75 0 011.06 1.06l-2.3 2.3z"
+                  fill="currentColor"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        class="group inline-flex flex-column w-full text-secondary"
+      >
+        <div
+          class="group flex flex-col w-full is-filled"
+          data-filled="true"
+          data-filled-within="true"
+          data-has-elements="true"
+          data-has-label="true"
+          data-has-value="true"
+          data-required="true"
+          data-slot="base"
+        >
+          <div
+            class="relative w-full inline-flex tap-highlight-transparent shadow-sm px-3 bg-default-100 border-medium border-default-200 data-[hover=true]:border-default-400 min-h-unit-10 rounded-medium flex-col items-start justify-center gap-0 transition-background !duration-150 transition-colors motion-reduce:transition-none outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background h-14 py-2 is-filled"
+            data-slot="input-wrapper"
+            style="cursor: text;"
+          >
+            <label
+              class="absolute z-10 pointer-events-none origin-top-left subpixel-antialiased block text-foreground-500 cursor-text after:content-['*'] after:text-danger after:ml-0.5 will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-default-600 group-data-[filled-within=true]:pointer-events-auto group-data-[filled-within=true]:scale-85 text-small group-data-[filled-within=true]:-translate-y-[calc(50%_+_theme(fontSize.small)/2_-_6px_-_theme(borderWidth.medium))] pe-2 max-w-full text-ellipsis overflow-hidden"
+              data-slot="label"
+              for="react-aria-:r12:"
+              id="react-aria-:r1a:"
+            >
+              Quiz category
+            </label>
+            <div
+              class="inline-flex w-full items-center h-full box-border group-data-[has-label=true]:items-end"
+              data-slot="inner-wrapper"
+            >
+              <input
+                aria-autocomplete="list"
+                aria-expanded="false"
+                aria-label="Quiz category"
+                aria-labelledby="react-aria-:r13:"
+                aria-required="true"
+                autocomplete="off"
+                class="w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 text-small is-filled"
+                data-filled="true"
+                data-filled-within="true"
+                data-has-end-content="true"
+                data-slot="input"
+                id="react-aria-:r12:"
+                required=""
+                role="combobox"
+                spellcheck="false"
+                type="text"
+                value="CUSTOM"
+              />
+              <div
+                class="relative flex h-full items-center -mr-2"
+              >
+                <button
+                  aria-expanded="false"
+                  aria-haspopup="listbox"
+                  aria-label="Show suggestions"
+                  aria-labelledby="react-aria-:r10: react-aria-:r13:"
+                  class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 gap-unit-2 rounded-full px-unit-0 !gap-unit-0 data-[pressed=true]:scale-[0.97] transition-transform-colors-opacity motion-reduce:transition-none bg-transparent data-[hover=true]:bg-default/40 min-w-unit-8 w-unit-8 h-unit-8 text-medium translate-x-1 cursor-text opacity-0 text-default-500 group-data-[invalid=true]:text-danger data-[visible=true]:opacity-100 data-[visible=true]:cursor-pointer sm:data-[visible=true]:opacity-0 sm:group-data-[hover=true]:data-[visible=true]:opacity-100"
+                  data-visible="true"
+                  id="react-aria-:r10:"
+                  tabindex="-1"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    fill="none"
+                    focusable="false"
+                    height="1em"
+                    role="presentation"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="1em"
+                  >
+                    <path
+                      d="M18 6L6 18M6 6l12 12"
+                    />
+                  </svg>
+                </button>
+                <button
+                  aria-expanded="false"
+                  aria-haspopup="listbox"
+                  aria-label="Show suggestions"
+                  aria-labelledby="react-aria-:r10: react-aria-:r13:"
+                  class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 gap-unit-2 rounded-full px-unit-0 !gap-unit-0 data-[pressed=true]:scale-[0.97] transition-transform-colors-opacity bg-transparent text-default-foreground data-[hover=true]:bg-default/40 min-w-unit-8 w-unit-8 h-unit-8 text-medium transition-transform duration-150 ease motion-reduce:transition-none data-[open=true]:rotate-180"
+                  id="react-aria-:r10:"
+                  tabindex="-1"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    fill="none"
+                    focusable="false"
+                    height="1em"
+                    role="presentation"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    viewBox="0 0 24 24"
+                    width="1em"
+                  >
+                    <path
+                      d="m6 9 6 6 6-6"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="group flex flex-col w-full is-filled"
+        data-filled="true"
+        data-filled-within="true"
+        data-has-elements="true"
+        data-has-label="true"
+        data-has-value="true"
+        data-slot="base"
+      >
+        <div
+          class="relative w-full inline-flex tap-highlight-transparent shadow-sm px-3 bg-default-100 border-medium border-default-200 min-h-unit-10 rounded-medium flex-col items-start justify-center gap-0 transition-background !duration-150 data-[hover=true]:border-secondary focus-within:border-secondary transition-colors motion-reduce:transition-none outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background h-14 py-2 is-filled"
+          data-slot="input-wrapper"
+          style="cursor: text;"
+        >
+          <label
+            class="absolute z-10 pointer-events-none origin-top-left subpixel-antialiased block cursor-text will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] text-secondary group-data-[filled-within=true]:pointer-events-auto group-data-[filled-within=true]:scale-85 text-small group-data-[filled-within=true]:-translate-y-[calc(50%_+_theme(fontSize.small)/2_-_6px_-_theme(borderWidth.medium))] pe-2 max-w-full text-ellipsis overflow-hidden"
+            data-slot="label"
+            for="react-aria-:r1e:"
+            id="react-aria-:r1f:"
+          >
+            Link to thumbnail
+          </label>
+          <div
+            class="inline-flex w-full items-center h-full box-border group-data-[has-label=true]:items-end"
+            data-slot="inner-wrapper"
+          >
+            <input
+              aria-label="Link to thumbnail"
+              aria-labelledby="react-aria-:r1e: react-aria-:r1f:"
+              autocomplete="on"
+              class="w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 text-small peer pr-6 is-filled"
+              data-filled="true"
+              data-filled-within="true"
+              data-slot="input"
+              id="react-aria-:r1e:"
+              name="thumbnailSrc"
+              type="text"
+              value="https://pbs.twimg.com/profile_images/1443921741328359461/B6z3_oN3_400x400.jpg"
+            />
+            <span
+              class="p-2 -m-2 z-10 hidden absolute right-3 appearance-none select-none opacity-0 hover:!opacity-100 cursor-pointer active:!opacity-70 rounded-full outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-large peer-data-[filled=true]:opacity-70 peer-data-[filled=true]:block transition-opacity motion-reduce:transition-none"
+              data-slot="clear-button"
+              role="button"
+              tabindex="0"
+            >
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                height="1em"
+                role="presentation"
+                viewBox="0 0 24 24"
+                width="1em"
+              >
+                <path
+                  d="M12 2a10 10 0 1010 10A10.016 10.016 0 0012 2zm3.36 12.3a.754.754 0 010 1.06.748.748 0 01-1.06 0l-2.3-2.3-2.3 2.3a.748.748 0 01-1.06 0 .754.754 0 010-1.06l2.3-2.3-2.3-2.3A.75.75 0 019.7 8.64l2.3 2.3 2.3-2.3a.75.75 0 011.06 1.06l-2.3 2.3z"
+                  fill="currentColor"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+      <button
+        class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-unit-4 min-w-unit-20 h-unit-10 text-small gap-unit-2 rounded-medium [&>svg]:max-w-[theme(spacing.unit-8)] data-[pressed=true]:scale-[0.97] transition-transform-colors-opacity motion-reduce:transition-none bg-success data-[hover=true]:opacity-hover text-white"
+        type="submit"
+      >
+        Submit quiz edit!
+      </button>
+      OR
+      <button
+        class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-unit-4 min-w-unit-20 h-unit-10 text-small gap-unit-2 rounded-medium [&>svg]:max-w-[theme(spacing.unit-8)] data-[pressed=true]:scale-[0.97] transition-transform-colors-opacity motion-reduce:transition-none bg-success data-[hover=true]:opacity-hover text-white"
+        type="button"
+      >
+        Edit its questions!
+      </button>
+    </form>
+  </div>
+  <div
+    class="Toastify"
+  />
+</div>
+`;

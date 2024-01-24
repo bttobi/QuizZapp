@@ -1,5 +1,21 @@
 import client from '../setup/dbSetup.js';
 
+async function getQuizzesCount(userid) {
+  if (userid)
+    return await await client.query(
+      `select count(*) as quizzes_count
+      from quizzes a
+      where user_id=$1`,
+      [userid]
+    );
+
+  return await client.query(
+    `select count(*) as quizzes_count
+    from quizzes a
+    where (select count(*) from questions where quiz_id=a.quiz_id) > 0`
+  );
+}
+
 const getQuizzes = async (req, res, next) => {
   try {
     const { userfilter, namefilter, categoryfilter, userid } = req.headers;
@@ -32,22 +48,6 @@ const getQuizzes = async (req, res, next) => {
     );
 
     const quizzesCountResult = await getQuizzesCount(userid);
-
-    async function getQuizzesCount(userid) {
-      if (userid)
-        return await await client.query(
-          `select count(*) as quizzes_count
-          from quizzes a
-          where user_id=$1`,
-          [userid]
-        );
-
-      return await client.query(
-        `select count(*) as quizzes_count
-        from quizzes a
-        where (select count(*) from questions where quiz_id=a.quiz_id) > 0`
-      );
-    }
 
     return res.status(200).json({
       quizzes: rows,

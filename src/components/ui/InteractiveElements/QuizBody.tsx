@@ -77,12 +77,16 @@ const QuizBody: React.FC<QuizBodyProps> = ({ questions }) => {
     <>
       <section className="flex sm:gap-10 gap-2 flex-col justify-between align-center items-center bg-primary w-5/6 rounded-lg">
         <Progress color="secondary" value={progressValue} />
-        <p className="text-lg">{numberQuestionsMessage}</p>
-        {/* <Image
-          className="sm:w-96 w-64"
-          src="https://cdn.cloudflare.steamstatic.com/steam/apps/322170/capsule_616x353.jpg?t=1703006148"
-        /> */}
-        <p className="text-3xl sm:mb-0 mb-4 text-center">
+        <span
+          style={{ wordBreak: 'break-word', hyphens: 'auto' }}
+          className="text-lg"
+        >
+          {numberQuestionsMessage}
+        </span>
+        <p
+          style={{ wordBreak: 'break-word', hyphens: 'auto' }}
+          className="text-3xl sm:mb-0 mb-4 text-center"
+        >
           {currentQuestion.question}
         </p>
         <Answers

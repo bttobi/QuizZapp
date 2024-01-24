@@ -43,8 +43,10 @@ const ConfirmationModal: React.FC<ConfirmationModalProps> = ({
 }) => {
   return (
     <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
-      <ModalContent>
-        <ModalHeader className="flex justify-center">{modalTitle}</ModalHeader>
+      <ModalContent className="sm:mt-32">
+        <ModalHeader className="flex justify-center text-center">
+          {modalTitle}
+        </ModalHeader>
         <ModalBody className="flex justify-center w-full text-center">
           {modalDescription}
           {children}

@@ -1,0 +1,129 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SignInPage component > matches snapshot 1`] = `
+<div>
+  <div
+    class="w-full h-full flex flex-col justify-start align-start items-center mt-24"
+    style="opacity: 0;"
+  >
+    <form
+      class="flex flex-col gap-4 rounded-xl p-12 bg-backgroundSecondary mb-4"
+    >
+      <div
+        class="group flex flex-col w-full"
+        data-has-elements="true"
+        data-has-label="true"
+        data-has-value="true"
+        data-slot="base"
+      >
+        <div
+          class="relative w-full inline-flex tap-highlight-transparent shadow-sm px-3 bg-default-100 border-medium border-default-200 min-h-unit-10 rounded-medium flex-col items-start justify-center gap-0 transition-background !duration-150 data-[hover=true]:border-secondary focus-within:border-secondary transition-colors motion-reduce:transition-none outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background h-14 py-2"
+          data-slot="input-wrapper"
+          style="cursor: text;"
+        >
+          <label
+            class="absolute z-10 pointer-events-none origin-top-left subpixel-antialiased block cursor-text will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] text-secondary group-data-[filled-within=true]:pointer-events-auto group-data-[filled-within=true]:scale-85 text-small group-data-[filled-within=true]:-translate-y-[calc(50%_+_theme(fontSize.small)/2_-_6px_-_theme(borderWidth.medium))] pe-2 max-w-full text-ellipsis overflow-hidden"
+            data-slot="label"
+            for="react-aria-:rn:"
+            id="react-aria-:ro:"
+          >
+            Email
+          </label>
+          <div
+            class="inline-flex w-full items-center h-full box-border group-data-[has-label=true]:items-end"
+            data-slot="inner-wrapper"
+          >
+            <input
+              aria-label="Email"
+              aria-labelledby="react-aria-:rn: react-aria-:ro:"
+              autocomplete="on"
+              class="w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 text-small"
+              data-slot="input"
+              id="react-aria-:rn:"
+              name="email"
+              type="email"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="group flex flex-col w-full"
+        data-has-elements="true"
+        data-has-label="true"
+        data-has-value="true"
+        data-slot="base"
+      >
+        <div
+          class="relative w-full inline-flex tap-highlight-transparent shadow-sm px-3 bg-default-100 border-medium border-default-200 min-h-unit-10 rounded-medium flex-col items-start justify-center gap-0 transition-background !duration-150 data-[hover=true]:border-secondary focus-within:border-secondary transition-colors motion-reduce:transition-none outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background h-14 py-2"
+          data-slot="input-wrapper"
+          style="cursor: text;"
+        >
+          <label
+            class="absolute z-10 pointer-events-none origin-top-left subpixel-antialiased block cursor-text will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] text-secondary group-data-[filled-within=true]:pointer-events-auto group-data-[filled-within=true]:scale-85 text-small group-data-[filled-within=true]:-translate-y-[calc(50%_+_theme(fontSize.small)/2_-_6px_-_theme(borderWidth.medium))] pe-2 max-w-full text-ellipsis overflow-hidden"
+            data-slot="label"
+            for="react-aria-:rs:"
+            id="react-aria-:rt:"
+          >
+            Password
+          </label>
+          <div
+            class="inline-flex w-full items-center h-full box-border group-data-[has-label=true]:items-end"
+            data-slot="inner-wrapper"
+          >
+            <input
+              aria-label="Password"
+              aria-labelledby="react-aria-:rs: react-aria-:rt:"
+              autocomplete="on"
+              class="w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 text-small"
+              data-has-end-content="true"
+              data-slot="input"
+              id="react-aria-:rs:"
+              name="password"
+              type="password"
+              value=""
+            />
+            <button
+              class="focus:outline-none"
+              type="button"
+            >
+              <svg
+                class="text-secondary"
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 640 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M320 400c-75.85 0-137.25-58.71-142.9-133.11L72.2 185.82c-13.79 17.3-26.48 35.59-36.72 55.59a32.35 32.35 0 0 0 0 29.19C89.71 376.41 197.07 448 320 448c26.91 0 52.87-4 77.89-10.46L346 397.39a144.13 144.13 0 0 1-26 2.61zm313.82 58.1l-110.55-85.44a331.25 331.25 0 0 0 81.25-102.07 32.35 32.35 0 0 0 0-29.19C550.29 135.59 442.93 64 320 64a308.15 308.15 0 0 0-147.32 37.7L45.46 3.37A16 16 0 0 0 23 6.18L3.37 31.45A16 16 0 0 0 6.18 53.9l588.36 454.73a16 16 0 0 0 22.46-2.81l19.64-25.27a16 16 0 0 0-2.82-22.45zm-183.72-142l-39.3-30.38A94.75 94.75 0 0 0 416 256a94.76 94.76 0 0 0-121.31-92.21A47.65 47.65 0 0 1 304 192a46.64 46.64 0 0 1-1.54 10l-73.61-56.89A142.31 142.31 0 0 1 320 112a143.92 143.92 0 0 1 144 144c0 21.63-5.29 41.79-13.9 60.11z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <button
+        class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-unit-4 min-w-unit-20 h-unit-10 text-small gap-unit-2 rounded-medium [&>svg]:max-w-[theme(spacing.unit-8)] data-[pressed=true]:scale-[0.97] transition-transform-colors-opacity motion-reduce:transition-none bg-success data-[hover=true]:opacity-hover text-white"
+        type="submit"
+      >
+        Sign in
+      </button>
+    </form>
+    <span>
+      New user?
+    </span>
+    <a
+      class="underline"
+      href="/signup"
+    >
+      Click here to sign up
+    </a>
+  </div>
+  <div
+    class="Toastify"
+  />
+</div>
+`;

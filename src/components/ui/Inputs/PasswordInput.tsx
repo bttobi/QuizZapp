@@ -11,6 +11,7 @@ import { Inputs } from '../Forms/input.types';
 interface PasswordInputProps extends InputProps {
   error: string | undefined;
   name: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   control: Control<Inputs, any>;
 }
 

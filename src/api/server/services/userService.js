@@ -1,10 +1,11 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import passport from 'passport';
 import jwtToken from '../helpers/jwtHelper.js';
 import client from '../setup/dbSetup.js';
 import bcrypt from 'bcrypt';
 
 const signIn = (req, res, next) => {
-  passport.authenticate('local', { session: false }, (error, user, info) => {
+  passport.authenticate('local', { session: false }, (error, user) => {
     if (error) return res.status(500).json({ error });
 
     const token = jwtToken({ userID: user.user_id, userEmail: user.email });

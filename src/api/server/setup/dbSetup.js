@@ -9,17 +9,17 @@ const DATABASE_USER = process.env.VITE_DATABASE_USER || 'test';
 const DATABASE_PASSWORD = process.env.VITE_DATABASE_PASSWORD || 'password';
 const DATABASE_NAME = process.env.VITE_DATABASE_NAME || 'users';
 
-const { Client } = pg;
+const { Pool } = pg;
 
-const client = new Client({
+const client = new Pool({
   host: DATABASE_HOST,
   user: DATABASE_USER,
   port: DATABASE_PORT,
   password: DATABASE_PASSWORD,
   database: DATABASE_NAME,
   ssl: true,
-  idleTimeoutMillis: 0,
   connectionTimeoutMillis: 0,
+  acquireConnectionTimeout: 5000,
   pool: {
     min: 0,
     max: 10,

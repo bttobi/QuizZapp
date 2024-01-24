@@ -8,6 +8,7 @@ import ErrorMessage from './ErrorMessage';
 
 interface QuizNameInputProps extends InputProps {
   error: string | undefined;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   control: Control<QuizInputs, any>;
   resetField: UseFormResetField<QuizInputs>;
 }

@@ -92,9 +92,10 @@ const QuizList: React.FC<QuizListProps> = ({
     <div className="flex flex-col gap-10 align-center items-center justify-evenly mb-16 mx-2">
       {isFetching ? (
         <Spinner
+          data-testid="spinner"
           size="lg"
           color="white"
-          className="absolute left-1/2 bottom-1/2"
+          className="absolute bottom-1/2"
         />
       ) : (
         <>
@@ -175,7 +176,7 @@ const QuizList: React.FC<QuizListProps> = ({
           </div>
           {quizzesCount && Number(quizzesCount) !== 0 && (
             <Pagination
-              className="fixed sm:bottom-10 bottom-2 z-20 bg-primary rounded-lg"
+              className="fixed sm:bottom-10 bottom-6 z-20 bg-primary rounded-lg"
               showControls
               loop
               color="secondary"

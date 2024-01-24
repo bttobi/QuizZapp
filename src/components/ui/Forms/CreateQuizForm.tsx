@@ -59,7 +59,7 @@ const CreateQuizForm = () => {
         className="text-white"
         isDisabled={!!Object.keys(errors).length}
         type="submit"
-        color={!!Object.keys(errors).length ? 'danger' : 'success'}
+        color={Object.keys(errors).length ? 'danger' : 'success'}
         variant="solid"
         isLoading={isPending}
       >

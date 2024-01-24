@@ -1,11 +1,11 @@
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 import { MdExplore } from 'react-icons/md';
 import { FaPen } from 'react-icons/fa';
 import { FaTrophy } from 'react-icons/fa';
 import { FaSignInAlt } from 'react-icons/fa';
 import { FaHome } from 'react-icons/fa';
 import { IoPersonCircleOutline } from 'react-icons/io5';
-import { RequireAuth } from 'react-auth-kit';
+import { useIsAuthenticated } from 'react-auth-kit';
 import { MdQuiz } from 'react-icons/md';
 import messages from './api/messages/messages.json';
 
@@ -19,10 +19,10 @@ import {
   QuizPage,
   UserQuizzesPage,
   QuizEditPage,
-  QuestionEditPage,
   QuestionsEditPage,
   UserProfilePage,
 } from './pages';
+import { Navigate } from 'react-router-dom';
 
 export interface RouteType {
   readonly name?: string;
@@ -32,14 +32,23 @@ export interface RouteType {
   readonly icon?: ReactNode;
 }
 
-//TODO: finish this
-export const homeRoute = (): string => '/';
-// export const exploreRoute
+interface PrivateRouteProps {
+  children?: ReactNode;
+}
+
+const PrivateRoute: React.FC<PrivateRouteProps> = ({ children }) => {
+  const isAuthenticated = useIsAuthenticated();
+  const auth = isAuthenticated();
+  if (auth === undefined) {
+    return null;
+  }
+  return auth ? <>{children}</> : <Navigate to="/signin" />;
+};
 
 const routes: RouteType[] = [
   {
     name: messages.home,
-    path: homeRoute(),
+    path: '/',
     element: <HomePage />,
     isNavVisible: true,
     icon: <FaHome />,
@@ -48,9 +57,9 @@ const routes: RouteType[] = [
     name: messages.explore,
     path: '/explore',
     element: (
-      <RequireAuth loginPath="/signin">
+      <PrivateRoute>
         <ExplorePage />
-      </RequireAuth>
+      </PrivateRoute>
     ),
     isNavVisible: true,
     icon: <MdExplore />,
@@ -59,9 +68,9 @@ const routes: RouteType[] = [
     name: messages.create,
     path: '/create',
     element: (
-      <RequireAuth loginPath="/signin">
+      <PrivateRoute>
         <QuizCreatePage />
-      </RequireAuth>
+      </PrivateRoute>
     ),
     isNavVisible: true,
     icon: <FaPen />,
@@ -90,9 +99,9 @@ const routes: RouteType[] = [
   {
     path: '/quiz/:quizID',
     element: (
-      <RequireAuth loginPath="/signin">
+      <PrivateRoute>
         <QuizPage />
-      </RequireAuth>
+      </PrivateRoute>
     ),
     isNavVisible: false,
   },
@@ -100,9 +109,9 @@ const routes: RouteType[] = [
     name: messages.myQuizzes,
     path: '/quizzes',
     element: (
-      <RequireAuth loginPath="/signin">
+      <PrivateRoute>
         <UserQuizzesPage />
-      </RequireAuth>
+      </PrivateRoute>
     ),
     isNavVisible: true,
     icon: <MdQuiz />,
@@ -110,36 +119,27 @@ const routes: RouteType[] = [
   {
     path: '/quiz/edit/:quizID',
     element: (
-      <RequireAuth loginPath="/signin">
+      <PrivateRoute>
         <QuizEditPage />
-      </RequireAuth>
+      </PrivateRoute>
     ),
     isNavVisible: false,
   },
   {
     path: '/questions/edit/:quizID',
     element: (
-      <RequireAuth loginPath="/signin">
+      <PrivateRoute>
         <QuestionsEditPage />
-      </RequireAuth>
-    ),
-    isNavVisible: false,
-  },
-  {
-    path: '/question/edit/:questionID',
-    element: (
-      <RequireAuth loginPath="/signin">
-        <QuestionEditPage />
-      </RequireAuth>
+      </PrivateRoute>
     ),
     isNavVisible: false,
   },
   {
     path: '/profile/:userID',
     element: (
-      <RequireAuth loginPath="/signin">
+      <PrivateRoute>
         <UserProfilePage />
-      </RequireAuth>
+      </PrivateRoute>
     ),
     isNavVisible: false,
   },

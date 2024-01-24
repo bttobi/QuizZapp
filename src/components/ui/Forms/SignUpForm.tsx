@@ -31,7 +31,7 @@ const SignUpForm = () => {
   };
 
   useEffect(() => {
-    if (!!errorMessage)
+    if (errorMessage)
       setError('email', { type: 'custom', message: errorMessage });
   }, [errorMessage]);
 
@@ -65,7 +65,7 @@ const SignUpForm = () => {
         className="text-white"
         isDisabled={!!Object.keys(errors).length || !passwordsMatch}
         type="submit"
-        color={!!Object.keys(errors).length ? 'danger' : 'success'}
+        color={Object.keys(errors).length ? 'danger' : 'success'}
         variant="solid"
         isLoading={isPending}
       >

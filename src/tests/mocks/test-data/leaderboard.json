@@ -1,0 +1,65 @@
+{
+  "leaderboard": [
+    {
+      "place": "1",
+      "email": "test@gmail.com",
+      "points": "15",
+      "user_id": "1"
+    },
+    {
+      "place": "2",
+      "email": "robot@gmail.com",
+      "points": "11",
+      "user_id": "3"
+    },
+    {
+      "place": "3",
+      "email": "student@gmail.pl",
+      "points": "10",
+      "user_id": "2"
+    },
+    {
+      "place": "4",
+      "email": "spadochroniarz@test.pl",
+      "points": "9",
+      "user_id": "4"
+    },
+    {
+      "place": "5",
+      "email": "kocham_politechnike@wp.pl",
+      "points": "8",
+      "user_id": "5"
+    },
+    {
+      "place": "6",
+      "email": "pilny_student@gmail.pl",
+      "points": "7",
+      "user_id": "6"
+    },
+    {
+      "place": "7",
+      "email": "profesor@o2.pl",
+      "points": "6",
+      "user_id": "7"
+    },
+    {
+      "place": "8",
+      "email": "doktor@o2.pl",
+      "points": "5",
+      "user_id": "8"
+    },
+    {
+      "place": "9",
+      "email": "magister@o2.pl",
+      "points": "4",
+      "user_id": "9"
+    },
+    {
+      "place": "10",
+      "email": "inzynier@o2.pl",
+      "points": "3",
+      "user_id": "10"
+    }
+  ],
+  "leaderboard_count": "11"
+}

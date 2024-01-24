@@ -6,7 +6,7 @@ const getLeaderboard = async (req, res, next) => {
     const offset = (Number(page) - 1) * 100;
     const { rows } = await client.query(
       `select * from public."leaderboardView"
-      limit 100
+      limit 10
       offset $1`,
       [offset]
     );

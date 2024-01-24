@@ -7,7 +7,7 @@ import refreshToken from './api/helpers/refreshToken';
 
 export const queryClient = new QueryClient({
   defaultOptions: {
-    queries: { refetchOnWindowFocus: false, staleTime: Infinity },
+    queries: { refetchOnWindowFocus: false, staleTime: 60000 },
   },
 });
 

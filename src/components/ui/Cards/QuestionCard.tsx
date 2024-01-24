@@ -85,7 +85,10 @@ const QuestionCard: React.FC<QuestionCardProps> = ({
           size="lg"
           className="z-10 bg-primary rounded-lg w-10"
         />
-        <span className="mx-5" style={{ wordBreak: 'break-all' }}>
+        <span
+          className="mx-5"
+          style={{ wordBreak: 'break-word', hyphens: 'auto' }}
+        >
           {questionName}
         </span>
         <div className="ml-auto flex gap-2">

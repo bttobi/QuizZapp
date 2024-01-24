@@ -1,0 +1,538 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`UserQuizzesPage component > matches snapshot 1`] = `
+<div>
+  <div
+    class="w-full h-full flex flex-col align-center items-center"
+    style="opacity: 0;"
+  >
+    <div
+      class="text-3xl mt-4"
+    >
+      My Quizzes
+    </div>
+    <section
+      class="flex gap-4 mx-4 sm:mx-0 sm:gap-10 items-center align-center justify-center h-32"
+    >
+      <div
+        class="group flex flex-col w-full max-w-xs"
+        data-has-elements="true"
+        data-has-label="true"
+        data-has-value="true"
+        data-slot="base"
+      >
+        <div
+          class="relative w-full inline-flex tap-highlight-transparent shadow-sm px-3 bg-default-100 data-[hover=true]:bg-default-200 group-data-[focus=true]:bg-default-100 min-h-unit-10 rounded-medium flex-col items-start justify-center gap-0 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background h-14 py-2"
+          data-slot="input-wrapper"
+          style="cursor: text;"
+        >
+          <label
+            class="absolute z-10 pointer-events-none origin-top-left subpixel-antialiased block text-foreground-500 cursor-text will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-default-600 group-data-[filled-within=true]:pointer-events-auto group-data-[filled-within=true]:scale-85 text-small group-data-[filled-within=true]:-translate-y-[calc(50%_+_theme(fontSize.small)/2_-_6px)] pe-2 max-w-full text-ellipsis overflow-hidden"
+            data-slot="label"
+            for="react-aria-:r1v:"
+            id="react-aria-:r20:"
+          >
+            Quiz name
+          </label>
+          <div
+            class="inline-flex w-full items-center h-full box-border group-data-[has-label=true]:items-end pb-0.5"
+            data-slot="inner-wrapper"
+          >
+            <input
+              aria-label="Quiz name"
+              aria-labelledby="react-aria-:r1v: react-aria-:r20:"
+              class="w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 text-small peer pr-6 group-data-[has-value=true]:text-default-foreground"
+              data-slot="input"
+              id="react-aria-:r1v:"
+              type="text"
+              value=""
+            />
+            <span
+              class="p-2 -m-2 z-10 hidden absolute right-3 appearance-none select-none opacity-0 hover:!opacity-100 cursor-pointer active:!opacity-70 rounded-full outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-large peer-data-[filled=true]:opacity-70 peer-data-[filled=true]:block transition-opacity motion-reduce:transition-none"
+              data-slot="clear-button"
+              role="button"
+              tabindex="0"
+            >
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                height="1em"
+                role="presentation"
+                viewBox="0 0 24 24"
+                width="1em"
+              >
+                <path
+                  d="M12 2a10 10 0 1010 10A10.016 10.016 0 0012 2zm3.36 12.3a.754.754 0 010 1.06.748.748 0 01-1.06 0l-2.3-2.3-2.3 2.3a.748.748 0 01-1.06 0 .754.754 0 010-1.06l2.3-2.3-2.3-2.3A.75.75 0 019.7 8.64l2.3 2.3 2.3-2.3a.75.75 0 011.06 1.06l-2.3 2.3z"
+                  fill="currentColor"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div
+        class="group inline-flex flex-column w-full max-w-xs"
+      >
+        <div
+          class="group flex flex-col w-full"
+          data-has-elements="true"
+          data-has-label="true"
+          data-has-value="true"
+          data-slot="base"
+        >
+          <div
+            class="relative w-full inline-flex tap-highlight-transparent shadow-sm px-3 bg-default-100 data-[hover=true]:bg-default-200 group-data-[focus=true]:bg-default-100 min-h-unit-10 rounded-medium flex-col items-start justify-center gap-0 transition-background motion-reduce:transition-none !duration-150 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background h-14 py-2"
+            data-slot="input-wrapper"
+            style="cursor: text;"
+          >
+            <label
+              class="absolute z-10 pointer-events-none origin-top-left subpixel-antialiased block text-foreground-500 cursor-text will-change-auto !duration-200 !ease-out motion-reduce:transition-none transition-[transform,color,left,opacity] group-data-[filled-within=true]:text-default-600 group-data-[filled-within=true]:pointer-events-auto group-data-[filled-within=true]:scale-85 text-small group-data-[filled-within=true]:-translate-y-[calc(50%_+_theme(fontSize.small)/2_-_6px)] pe-2 max-w-full text-ellipsis overflow-hidden"
+              data-slot="label"
+              for="react-aria-:r26:"
+              id="react-aria-:r2e:"
+            >
+              Quiz category
+            </label>
+            <div
+              class="inline-flex w-full items-center h-full box-border group-data-[has-label=true]:items-end pb-0.5"
+              data-slot="inner-wrapper"
+            >
+              <input
+                aria-autocomplete="list"
+                aria-expanded="false"
+                aria-label="Quiz category"
+                aria-labelledby="react-aria-:r27:"
+                autocomplete="off"
+                class="w-full font-normal bg-transparent !outline-none placeholder:text-foreground-500 focus-visible:outline-none data-[has-start-content=true]:ps-1.5 data-[has-end-content=true]:pe-1.5 text-small group-data-[has-value=true]:text-default-foreground"
+                data-has-end-content="true"
+                data-slot="input"
+                id="react-aria-:r26:"
+                role="combobox"
+                spellcheck="false"
+                type="text"
+                value=""
+              />
+              <div
+                class="relative flex h-full items-center -mr-2"
+              >
+                <button
+                  aria-expanded="false"
+                  aria-haspopup="listbox"
+                  aria-label="Show suggestions"
+                  aria-labelledby="react-aria-:r24: react-aria-:r27:"
+                  class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 gap-unit-2 rounded-full px-unit-0 !gap-unit-0 data-[pressed=true]:scale-[0.97] transition-transform-colors-opacity motion-reduce:transition-none bg-transparent data-[hover=true]:bg-default/40 min-w-unit-8 w-unit-8 h-unit-8 text-medium translate-x-1 cursor-text opacity-0 text-default-500 group-data-[invalid=true]:text-danger data-[visible=true]:opacity-100 data-[visible=true]:cursor-pointer sm:data-[visible=true]:opacity-0 sm:group-data-[hover=true]:data-[visible=true]:opacity-100"
+                  data-visible="false"
+                  id="react-aria-:r24:"
+                  tabindex="-1"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    fill="none"
+                    focusable="false"
+                    height="1em"
+                    role="presentation"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="1em"
+                  >
+                    <path
+                      d="M18 6L6 18M6 6l12 12"
+                    />
+                  </svg>
+                </button>
+                <button
+                  aria-expanded="false"
+                  aria-haspopup="listbox"
+                  aria-label="Show suggestions"
+                  aria-labelledby="react-aria-:r24: react-aria-:r27:"
+                  class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 gap-unit-2 rounded-full px-unit-0 !gap-unit-0 data-[pressed=true]:scale-[0.97] transition-transform-colors-opacity bg-transparent text-default-foreground data-[hover=true]:bg-default/40 min-w-unit-8 w-unit-8 h-unit-8 text-medium transition-transform duration-150 ease motion-reduce:transition-none data-[open=true]:rotate-180"
+                  id="react-aria-:r24:"
+                  tabindex="-1"
+                  type="button"
+                >
+                  <svg
+                    aria-hidden="true"
+                    fill="none"
+                    focusable="false"
+                    height="1em"
+                    role="presentation"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    viewBox="0 0 24 24"
+                    width="1em"
+                  >
+                    <path
+                      d="m6 9 6 6 6-6"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="flex items-center justify-center flex-wrap"
+    >
+      <div
+        class="flex flex-col gap-10 align-center items-center justify-evenly mb-16 mx-2"
+      >
+        <div
+          class="flex flex-col justify-center items-center"
+        >
+          <div
+            class="flex justify-center items-center align-center sm:gap-4 gap-0 sm:flex-row flex-col"
+          >
+            <button
+              class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-unit-4 min-w-unit-20 h-unit-10 text-small gap-unit-2 rounded-medium [&>svg]:max-w-[theme(spacing.unit-8)] data-[pressed=true]:scale-[0.97] transition-transform-colors-opacity motion-reduce:transition-none bg-success data-[hover=true]:opacity-hover text-white w-48 mb-8"
+              type="button"
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 512 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
+                />
+              </svg>
+              Search
+            </button>
+            <label
+              class="group relative max-w-fit cursor-pointer tap-highlight-transparent p-2 -m-2 mb-6 bg-default-50 rounded-xl flex justify-center align-center items-center"
+            >
+              <div
+                style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+              >
+                <input
+                  aria-label=" "
+                  aria-labelledby=":r2m:"
+                  type="checkbox"
+                  value=""
+                />
+              </div>
+              <span
+                aria-hidden="true"
+                class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden before:content-[''] before:absolute before:inset-0 before:border-solid before:border-2 before:box-border before:border-default after:content-[''] after:absolute after:inset-0 after:scale-50 after:opacity-0 after:origin-center group-data-[selected=true]:after:scale-100 group-data-[selected=true]:after:opacity-100 group-data-[hover=true]:before:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background after:bg-primary after:text-primary-foreground text-primary-foreground w-6 h-6 mr-2 rounded-[calc(theme(borderRadius.medium)*0.7)] before:rounded-[calc(theme(borderRadius.medium)*0.7)] after:rounded-[calc(theme(borderRadius.medium)*0.7)] before:transition-colors group-data-[pressed=true]:scale-95 transition-transform after:transition-transform-opacity after:!ease-linear after:!duration-200 motion-reduce:transition-none"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="z-10 opacity-0 group-data-[selected=true]:opacity-100 w-5 h-4 transition-opacity motion-reduce:transition-none"
+                  role="presentation"
+                  viewBox="0 0 17 18"
+                >
+                  <polyline
+                    fill="none"
+                    points="1 9 7 14 15 4"
+                    stroke="currentColor"
+                    stroke-dasharray="22"
+                    stroke-dashoffset="66"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  />
+                </svg>
+              </span>
+              <span
+                class="relative text-foreground select-none text-large transition-colors-opacity before:transition-width motion-reduce:transition-none"
+                id=":r2m:"
+              >
+                <span
+                  class="text-sm"
+                >
+                  Select all from page
+                </span>
+              </span>
+            </label>
+            <button
+              class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-unit-4 min-w-unit-20 h-unit-10 text-small gap-unit-2 rounded-medium opacity-disabled pointer-events-none [&>svg]:max-w-[theme(spacing.unit-8)] data-[pressed=true]:scale-[0.97] transition-transform-colors-opacity motion-reduce:transition-none bg-danger data-[hover=true]:opacity-hover text-white w-48 mb-8"
+              data-disabled="true"
+              disabled=""
+              type="button"
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 448 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M32 464a48 48 0 0 0 48 48h288a48 48 0 0 0 48-48V128H32zm272-256a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zM432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16z"
+                />
+              </svg>
+              Delete
+            </button>
+          </div>
+          <div>
+            <ul
+              class="flex items-center justify-center flex-wrap gap-10 pb-20 sm:pb-10"
+            >
+              <li
+                style="transform: scale(0) translateZ(0);"
+              >
+                <label
+                  class="group max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 absolute z-10 bg-primary rounded-lg w-10"
+                >
+                  <div
+                    style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+                  >
+                    <input
+                      aria-label=" "
+                      aria-labelledby=":r2s:"
+                      type="checkbox"
+                      value=""
+                    />
+                  </div>
+                  <span
+                    aria-hidden="true"
+                    class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden before:content-[''] before:absolute before:inset-0 before:border-solid before:border-2 before:box-border before:border-default after:content-[''] after:absolute after:inset-0 after:scale-50 after:opacity-0 after:origin-center group-data-[selected=true]:after:scale-100 group-data-[selected=true]:after:opacity-100 group-data-[hover=true]:before:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background after:bg-primary after:text-primary-foreground text-primary-foreground w-6 h-6 mr-2 rounded-[calc(theme(borderRadius.medium)*0.7)] before:rounded-[calc(theme(borderRadius.medium)*0.7)] after:rounded-[calc(theme(borderRadius.medium)*0.7)] before:transition-colors group-data-[pressed=true]:scale-95 transition-transform after:transition-transform-opacity after:!ease-linear after:!duration-200 motion-reduce:transition-none"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="z-10 opacity-0 group-data-[selected=true]:opacity-100 w-5 h-4 transition-opacity motion-reduce:transition-none"
+                      role="presentation"
+                      viewBox="0 0 17 18"
+                    >
+                      <polyline
+                        fill="none"
+                        points="1 9 7 14 15 4"
+                        stroke="currentColor"
+                        stroke-dasharray="22"
+                        stroke-dashoffset="66"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </span>
+                </label>
+                <div>
+                  <button
+                    class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 min-w-unit-20 text-small gap-unit-2 rounded-medium [&>svg]:max-w-[theme(spacing.unit-8)] data-[pressed=true]:scale-[0.97] transition-transform-colors-opacity motion-reduce:transition-none bg-transparent text-default-foreground data-[hover=true]:bg-default/40 h-[150px] w-64 transition-all cursor-pointer p-0"
+                    type="button"
+                  >
+                    <span
+                      class="absolute z-30 right-1 border-2 border-white rounded-full px-1 top-1 font-bold"
+                    >
+                      4
+                    </span>
+                    <div
+                      class="absolute z-10 top-1 flex flex-col h-full p-2 items-center text-wrap"
+                    >
+                      <span
+                        class="text-tiny text-white/60 uppercase font-bold"
+                      >
+                        FOOD
+                      </span>
+                      <span
+                        class="text-white font-medium text-large h-8 min-w-0"
+                        style="text-wrap: wrap; word-break: break-all;"
+                      >
+                        Cooking
+                      </span>
+                      <span
+                        class="text-tiny text-white/60 uppercase font-bold mt-auto mb-2 text-wrap"
+                        style="text-wrap: wrap; word-break: break-word;"
+                      >
+                        Author: test@gmail.com
+                      </span>
+                    </div>
+                    <img
+                      alt="Card background"
+                      class="relative shadow-black/5 data-[loaded=true]:opacity-100 shadow-none opacity-0 transition-transform-opacity motion-reduce:transition-none !duration-300 rounded-large z-0 w-full h-full object-cover brightness-[0.25]"
+                      src="https://pbs.twimg.com/profile_images/1443921741328359461/B6z3_oN3_400x400.jpg"
+                    />
+                  </button>
+                </div>
+              </li>
+              <li
+                style="transform: scale(0) translateZ(0);"
+              >
+                <label
+                  class="group max-w-fit inline-flex items-center justify-start cursor-pointer tap-highlight-transparent p-2 -m-2 absolute z-10 bg-primary rounded-lg w-10"
+                >
+                  <div
+                    style="border: 0px; clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap;"
+                  >
+                    <input
+                      aria-label=" "
+                      aria-labelledby=":r34:"
+                      type="checkbox"
+                      value=""
+                    />
+                  </div>
+                  <span
+                    aria-hidden="true"
+                    class="relative inline-flex items-center justify-center flex-shrink-0 overflow-hidden before:content-[''] before:absolute before:inset-0 before:border-solid before:border-2 before:box-border before:border-default after:content-[''] after:absolute after:inset-0 after:scale-50 after:opacity-0 after:origin-center group-data-[selected=true]:after:scale-100 group-data-[selected=true]:after:opacity-100 group-data-[hover=true]:before:bg-default-100 outline-none group-data-[focus-visible=true]:z-10 group-data-[focus-visible=true]:ring-2 group-data-[focus-visible=true]:ring-focus group-data-[focus-visible=true]:ring-offset-2 group-data-[focus-visible=true]:ring-offset-background after:bg-primary after:text-primary-foreground text-primary-foreground w-6 h-6 mr-2 rounded-[calc(theme(borderRadius.medium)*0.7)] before:rounded-[calc(theme(borderRadius.medium)*0.7)] after:rounded-[calc(theme(borderRadius.medium)*0.7)] before:transition-colors group-data-[pressed=true]:scale-95 transition-transform after:transition-transform-opacity after:!ease-linear after:!duration-200 motion-reduce:transition-none"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="z-10 opacity-0 group-data-[selected=true]:opacity-100 w-5 h-4 transition-opacity motion-reduce:transition-none"
+                      role="presentation"
+                      viewBox="0 0 17 18"
+                    >
+                      <polyline
+                        fill="none"
+                        points="1 9 7 14 15 4"
+                        stroke="currentColor"
+                        stroke-dasharray="22"
+                        stroke-dashoffset="66"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </span>
+                </label>
+                <div>
+                  <button
+                    class="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 min-w-unit-20 text-small gap-unit-2 rounded-medium [&>svg]:max-w-[theme(spacing.unit-8)] data-[pressed=true]:scale-[0.97] transition-transform-colors-opacity motion-reduce:transition-none bg-transparent text-default-foreground data-[hover=true]:bg-default/40 h-[150px] w-64 transition-all cursor-pointer p-0"
+                    type="button"
+                  >
+                    <span
+                      class="absolute z-30 right-1 border-2 border-white rounded-full px-1 top-1 font-bold"
+                    >
+                      1
+                    </span>
+                    <div
+                      class="absolute z-10 top-1 flex flex-col h-full p-2 items-center text-wrap"
+                    >
+                      <span
+                        class="text-tiny text-white/60 uppercase font-bold"
+                      >
+                        SCIENCE
+                      </span>
+                      <span
+                        class="text-white font-medium text-large h-8 min-w-0"
+                        style="text-wrap: wrap; word-break: break-all;"
+                      >
+                        My test
+                      </span>
+                      <span
+                        class="text-tiny text-white/60 uppercase font-bold mt-auto mb-2 text-wrap"
+                        style="text-wrap: wrap; word-break: break-word;"
+                      >
+                        Author: test@gmail.com
+                      </span>
+                    </div>
+                    <img
+                      alt="Card background"
+                      class="relative shadow-black/5 data-[loaded=true]:opacity-100 shadow-none opacity-0 transition-transform-opacity motion-reduce:transition-none !duration-300 rounded-large z-0 w-full h-full object-cover brightness-[0.25]"
+                      src="https://i.imgur.com/CZaDkUQ.png"
+                    />
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <nav
+          aria-label="pagination navigation"
+          class="p-2.5 -m-2.5 overflow-x-scroll scrollbar-hide fixed sm:bottom-10 bottom-6 z-20 bg-primary rounded-lg"
+          data-active-page="1"
+          data-controls="true"
+          data-dots-jump="5"
+          data-loop="true"
+          data-slot="base"
+          data-total="1"
+          role="navigation"
+        >
+          <ul
+            class="flex flex-nowrap h-fit max-w-fit relative gap-1 items-center overflow-visible rounded-medium"
+            data-slot="wrapper"
+          >
+            <span
+              aria-hidden="true"
+              class="absolute flex overflow-visible items-center justify-center origin-center left-0 select-none touch-none pointer-events-none z-20 bg-secondary text-secondary-foreground data-[moving=true]:transition-transform !data-[moving=true]:duration-300 opacity-0 data-[moving]:opacity-100 min-w-9 w-9 h-9 text-small rounded-medium"
+              data-moving="false"
+              data-slot="cursor"
+              style="transform: translateX(0px) scale(1);"
+            >
+              1
+            </span>
+            <li
+              aria-label="previous page button"
+              class="flex flex-wrap truncate box-border items-center justify-center text-default-foreground outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:text-default-300 data-[disabled=true]:pointer-events-none shadow-sm bg-default-100 [&[data-hover=true]:not([data-active=true])]:bg-default-200 active:bg-default-300 min-w-9 w-9 h-9 text-small rounded-medium"
+              data-slot="prev"
+              role="button"
+              tabindex="0"
+            >
+              <svg
+                aria-hidden="true"
+                fill="none"
+                focusable="false"
+                height="1em"
+                role="presentation"
+                viewBox="0 0 24 24"
+                width="1em"
+              >
+                <path
+                  d="M15.5 19l-7-7 7-7"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                />
+              </svg>
+            </li>
+            <li
+              aria-current="true"
+              aria-label="pagination item 1 active"
+              class="tap-highlight-transparent select-none touch-none data-[pressed=true]:scale-[0.97] transition-transform-background flex flex-wrap truncate box-border items-center justify-center text-default-foreground outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:text-default-300 data-[disabled=true]:pointer-events-none shadow-sm bg-default-100 [&[data-hover=true]:not([data-active=true])]:bg-default-200 active:bg-default-300 min-w-9 w-9 h-9 text-small rounded-medium"
+              data-active="true"
+              data-slot="item"
+              role="button"
+              tabindex="0"
+            >
+              1
+            </li>
+            <li
+              aria-label="next page button"
+              class="flex flex-wrap truncate box-border items-center justify-center text-default-foreground outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:text-default-300 data-[disabled=true]:pointer-events-none shadow-sm bg-default-100 [&[data-hover=true]:not([data-active=true])]:bg-default-200 active:bg-default-300 min-w-9 w-9 h-9 text-small rounded-medium"
+              data-slot="next"
+              role="button"
+              tabindex="0"
+            >
+              <svg
+                aria-hidden="true"
+                class="rotate-180"
+                fill="none"
+                focusable="false"
+                height="1em"
+                role="presentation"
+                viewBox="0 0 24 24"
+                width="1em"
+              >
+                <path
+                  d="M15.5 19l-7-7 7-7"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                />
+              </svg>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+  </div>
+  <div
+    class="Toastify"
+  />
+</div>
+`;

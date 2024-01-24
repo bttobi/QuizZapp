@@ -1,0 +1,17 @@
+{
+  "user_id": "1",
+  "email": "student@gmail.com",
+  "overall_prof": "83.33333333333333333300",
+  "best_quiz": "Test promotora",
+  "best_prof_quiz": "85.71428571428571428600",
+  "best_question": "Test?",
+  "best_question_prof": "100",
+  "worst_quiz": "Testowanie",
+  "worst_prof_quiz": "81.81818181818181818200",
+  "worst_question": "Kolejne pytanie",
+  "worst_question_prof": "0",
+  "most_taken_quiz": "Moj test",
+  "most_taken_count": "7",
+  "attempt_count": "12",
+  "created_quizzes": "2"
+}

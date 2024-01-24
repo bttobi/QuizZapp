@@ -1,0 +1,5 @@
+{
+  "question": "Test?",
+  "answers": ["poprawna odp", "niepoprawna odp"],
+  "correct_answer": "poprawna odp"
+}

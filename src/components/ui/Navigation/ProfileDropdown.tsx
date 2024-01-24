@@ -55,7 +55,7 @@ const ProfileDropdown = () => {
           className="pointer-events-none"
         >
           {isFetching ? (
-            <Spinner color="white" />
+            <Spinner data-testid="spinner" color="white" />
           ) : (
             <div className="flex flex-col font-semibold">
               <span

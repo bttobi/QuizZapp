@@ -7,11 +7,14 @@ import { QuestionInputs } from '../Forms/input.types';
 import { useGetQuiz } from '../../../api/hooks/quiz.hooks';
 
 interface QuestionInputProps extends InputProps {
+  questionName: string;
   error: string | undefined;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   control: Control<QuestionInputs, any>;
 }
 
 const QuestionInput: React.FC<QuestionInputProps> = ({
+  questionName,
   error,
   control,
   ...props
@@ -26,7 +29,8 @@ const QuestionInput: React.FC<QuestionInputProps> = ({
         rules={{
           required: messages.fieldRequired,
           validate: (val: string) => {
-            if (questions?.includes(val)) return messages.questionNameAlrTaken;
+            if (questions?.filter(el => el === questionName)?.includes(val))
+              return messages.questionNameAlrTaken;
           },
         }}
         render={({ field }) => (

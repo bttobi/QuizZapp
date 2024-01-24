@@ -1,10 +1,9 @@
-import { setupServer } from 'msw/node';
-import { handlers } from './src/tests/mocks/handlers';
-
-export const server = setupServer(...handlers);
+import '@testing-library/jest-dom';
+import 'vitest-canvas-mock';
+import { server } from './src/tests/mocks/server';
 
 beforeAll(() => {
-  server.listen();
+  server.listen({ onUnhandledRequest: 'warn' });
 });
 
 afterEach(() => {

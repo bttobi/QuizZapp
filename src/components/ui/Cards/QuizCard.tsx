@@ -82,16 +82,16 @@ const QuizCard: React.FC<QuizCardProps> = ({
               {category}
             </span>
             <span
-              //@ts-ignore
+              //@ts-expect-error needed because of textWrap
               style={{ textWrap: 'wrap', wordBreak: 'break-all' }}
               className="text-white font-medium text-large h-8 min-w-0"
             >
               {quiz_name}
             </span>
             <span
-              className="text-tiny text-white/60 uppercase font-bold relative top-16 text-wrap"
-              //@ts-ignore
-              style={{ textWrap: 'wrap', wordBreak: 'break-all' }}
+              className="text-tiny text-white/60 uppercase font-bold mt-auto mb-2 text-wrap"
+              //@ts-expect-error needed because of textWrap
+              style={{ textWrap: 'wrap', wordBreak: 'break-word' }}
             >
               {`${messages.createdBy}: ${author}`}
             </span>

@@ -1,0 +1,472 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`LeaderboardPage component > matches snapshot 1`] = `
+<div>
+  <div
+    class="w-full h-full flex flex-col justify-start align-center items-center"
+    style="opacity: 0;"
+  >
+    <ul
+      class="mt-12 bg-backgroundSecondary h-max-3/4 px-8 pb-8 pt-2 rounded-lg sm:w-1/2"
+    >
+      <div
+        class="text-3xl mt-4 text-center mb-8"
+      >
+        Best Quiz Masters
+      </div>
+      <div
+        class="grid grid-cols-5 grid-rows-1 justify-center bg-default rounded-t-xl"
+      >
+        <span
+          class="false text-center px-2"
+        >
+          Place
+        </span>
+        <span
+          class="col-span-3 text-center px-2"
+        >
+          User
+        </span>
+        <span
+          class="false text-center px-2"
+        >
+          Score
+        </span>
+      </div>
+      <li
+        class="grid grid-cols-5 gap-4 bg-secondary text-white cursor-pointer justify-center align-center items-center bg-yellow-500 border-b-3  border-backgroundSecondary p-2"
+      >
+        <span
+          class="text-center"
+        >
+          1
+        </span>
+        <span
+          class="text-center flex justify-center items-center align-center grow-3 col-span-3"
+        >
+          <span>
+            <svg
+              class="mr-2"
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 576 512"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M552 64H448V24c0-13.3-10.7-24-24-24H152c-13.3 0-24 10.7-24 24v40H24C10.7 64 0 74.7 0 88v56c0 35.7 22.5 72.4 61.9 100.7 31.5 22.7 69.8 37.1 110 41.7C203.3 338.5 240 360 240 360v72h-48c-35.3 0-64 20.7-64 56v12c0 6.6 5.4 12 12 12h296c6.6 0 12-5.4 12-12v-12c0-35.3-28.7-56-64-56h-48v-72s36.7-21.5 68.1-73.6c40.3-4.6 78.6-19 110-41.7 39.3-28.3 61.9-65 61.9-100.7V88c0-13.3-10.7-24-24-24zM99.3 192.8C74.9 175.2 64 155.6 64 144v-16h64.2c1 32.6 5.8 61.2 12.8 86.2-15.1-5.2-29.2-12.4-41.7-21.4zM512 144c0 16.1-17.7 36.1-35.3 48.8-12.5 9-26.7 16.2-41.8 21.4 7-25 11.8-53.6 12.8-86.2H512v16z"
+              />
+            </svg>
+          </span>
+          <div
+            class="flex flex-wrap justify-center items-center align-center text-center"
+          >
+            <span>
+              test
+            </span>
+            <span>
+              @gmail.com
+            </span>
+          </div>
+          <span>
+            <svg
+              class="ml-2"
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 576 512"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M552 64H448V24c0-13.3-10.7-24-24-24H152c-13.3 0-24 10.7-24 24v40H24C10.7 64 0 74.7 0 88v56c0 35.7 22.5 72.4 61.9 100.7 31.5 22.7 69.8 37.1 110 41.7C203.3 338.5 240 360 240 360v72h-48c-35.3 0-64 20.7-64 56v12c0 6.6 5.4 12 12 12h296c6.6 0 12-5.4 12-12v-12c0-35.3-28.7-56-64-56h-48v-72s36.7-21.5 68.1-73.6c40.3-4.6 78.6-19 110-41.7 39.3-28.3 61.9-65 61.9-100.7V88c0-13.3-10.7-24-24-24zM99.3 192.8C74.9 175.2 64 155.6 64 144v-16h64.2c1 32.6 5.8 61.2 12.8 86.2-15.1-5.2-29.2-12.4-41.7-21.4zM512 144c0 16.1-17.7 36.1-35.3 48.8-12.5 9-26.7 16.2-41.8 21.4 7-25 11.8-53.6 12.8-86.2H512v16z"
+              />
+            </svg>
+          </span>
+        </span>
+        <span
+          class="text-center"
+        >
+          15
+        </span>
+      </li>
+      <li
+        class="grid grid-cols-5 gap-4 bg-secondary text-white cursor-pointer justify-center align-center items-center bg-slate-500 border-b-3  border-backgroundSecondary p-2"
+      >
+        <span
+          class="text-center"
+        >
+          2
+        </span>
+        <span
+          class="text-center flex justify-center items-center align-center grow-3 col-span-3"
+        >
+          <span />
+          <div
+            class="flex flex-wrap justify-center items-center align-center text-center"
+          >
+            <span>
+              robot
+            </span>
+            <span>
+              @gmail.com
+            </span>
+          </div>
+          <span />
+        </span>
+        <span
+          class="text-center"
+        >
+          11
+        </span>
+      </li>
+      <li
+        class="grid grid-cols-5 gap-4 bg-secondary text-white cursor-pointer justify-center align-center items-center bg-yellow-800 border-b-3  border-backgroundSecondary p-2"
+      >
+        <span
+          class="text-center"
+        >
+          3
+        </span>
+        <span
+          class="text-center flex justify-center items-center align-center grow-3 col-span-3"
+        >
+          <span />
+          <div
+            class="flex flex-wrap justify-center items-center align-center text-center"
+          >
+            <span>
+              student
+            </span>
+            <span>
+              @gmail.pl
+            </span>
+          </div>
+          <span />
+        </span>
+        <span
+          class="text-center"
+        >
+          10
+        </span>
+      </li>
+      <li
+        class="grid grid-cols-5 gap-4 bg-secondary text-white cursor-pointer justify-center align-center items-center  border-b-3  border-backgroundSecondary p-2"
+      >
+        <span
+          class="text-center"
+        >
+          4
+        </span>
+        <span
+          class="text-center flex justify-center items-center align-center grow-3 col-span-3"
+        >
+          <span />
+          <div
+            class="flex flex-wrap justify-center items-center align-center text-center"
+          >
+            <span>
+              spadochroniarz
+            </span>
+            <span>
+              @test.pl
+            </span>
+          </div>
+          <span />
+        </span>
+        <span
+          class="text-center"
+        >
+          9
+        </span>
+      </li>
+      <li
+        class="grid grid-cols-5 gap-4 bg-secondary text-white cursor-pointer justify-center align-center items-center  border-b-3  border-backgroundSecondary p-2"
+      >
+        <span
+          class="text-center"
+        >
+          5
+        </span>
+        <span
+          class="text-center flex justify-center items-center align-center grow-3 col-span-3"
+        >
+          <span />
+          <div
+            class="flex flex-wrap justify-center items-center align-center text-center"
+          >
+            <span>
+              kocham_politechnike
+            </span>
+            <span>
+              @wp.pl
+            </span>
+          </div>
+          <span />
+        </span>
+        <span
+          class="text-center"
+        >
+          8
+        </span>
+      </li>
+      <li
+        class="grid grid-cols-5 gap-4 bg-secondary text-white cursor-pointer justify-center align-center items-center  border-b-3  border-backgroundSecondary p-2"
+      >
+        <span
+          class="text-center"
+        >
+          6
+        </span>
+        <span
+          class="text-center flex justify-center items-center align-center grow-3 col-span-3"
+        >
+          <span />
+          <div
+            class="flex flex-wrap justify-center items-center align-center text-center"
+          >
+            <span>
+              pilny_student
+            </span>
+            <span>
+              @gmail.pl
+            </span>
+          </div>
+          <span />
+        </span>
+        <span
+          class="text-center"
+        >
+          7
+        </span>
+      </li>
+      <li
+        class="grid grid-cols-5 gap-4 bg-secondary text-white cursor-pointer justify-center align-center items-center  border-b-3  border-backgroundSecondary p-2"
+      >
+        <span
+          class="text-center"
+        >
+          7
+        </span>
+        <span
+          class="text-center flex justify-center items-center align-center grow-3 col-span-3"
+        >
+          <span />
+          <div
+            class="flex flex-wrap justify-center items-center align-center text-center"
+          >
+            <span>
+              profesor
+            </span>
+            <span>
+              @o2.pl
+            </span>
+          </div>
+          <span />
+        </span>
+        <span
+          class="text-center"
+        >
+          6
+        </span>
+      </li>
+      <li
+        class="grid grid-cols-5 gap-4 bg-secondary text-white cursor-pointer justify-center align-center items-center  border-b-3  border-backgroundSecondary p-2"
+      >
+        <span
+          class="text-center"
+        >
+          8
+        </span>
+        <span
+          class="text-center flex justify-center items-center align-center grow-3 col-span-3"
+        >
+          <span />
+          <div
+            class="flex flex-wrap justify-center items-center align-center text-center"
+          >
+            <span>
+              doktor
+            </span>
+            <span>
+              @o2.pl
+            </span>
+          </div>
+          <span />
+        </span>
+        <span
+          class="text-center"
+        >
+          5
+        </span>
+      </li>
+      <li
+        class="grid grid-cols-5 gap-4 bg-secondary text-white cursor-pointer justify-center align-center items-center  border-b-3  border-backgroundSecondary p-2"
+      >
+        <span
+          class="text-center"
+        >
+          9
+        </span>
+        <span
+          class="text-center flex justify-center items-center align-center grow-3 col-span-3"
+        >
+          <span />
+          <div
+            class="flex flex-wrap justify-center items-center align-center text-center"
+          >
+            <span>
+              magister
+            </span>
+            <span>
+              @o2.pl
+            </span>
+          </div>
+          <span />
+        </span>
+        <span
+          class="text-center"
+        >
+          4
+        </span>
+      </li>
+      <li
+        class="grid grid-cols-5 gap-4 bg-secondary text-white cursor-pointer justify-center align-center items-center  false border-backgroundSecondary p-2"
+      >
+        <span
+          class="text-center"
+        >
+          10
+        </span>
+        <span
+          class="text-center flex justify-center items-center align-center grow-3 col-span-3"
+        >
+          <span />
+          <div
+            class="flex flex-wrap justify-center items-center align-center text-center"
+          >
+            <span>
+              inzynier
+            </span>
+            <span>
+              @o2.pl
+            </span>
+          </div>
+          <span />
+        </span>
+        <span
+          class="text-center"
+        >
+          3
+        </span>
+      </li>
+      <div
+        class="bg-default p-2 rounded-b-xl"
+      />
+    </ul>
+    <nav
+      aria-label="pagination navigation"
+      class="p-2.5 -m-2.5 overflow-x-scroll scrollbar-hide fixed sm:bottom-10 bottom-6 z-20 bg-primary rounded-lg"
+      data-active-page="1"
+      data-controls="true"
+      data-dots-jump="5"
+      data-loop="true"
+      data-slot="base"
+      data-total="2"
+      role="navigation"
+    >
+      <ul
+        class="flex flex-nowrap h-fit max-w-fit relative gap-1 items-center overflow-visible rounded-medium"
+        data-slot="wrapper"
+      >
+        <span
+          aria-hidden="true"
+          class="absolute flex overflow-visible items-center justify-center origin-center left-0 select-none touch-none pointer-events-none z-20 bg-secondary text-secondary-foreground data-[moving=true]:transition-transform !data-[moving=true]:duration-300 opacity-0 data-[moving]:opacity-100 min-w-9 w-9 h-9 text-small rounded-medium"
+          data-moving="false"
+          data-slot="cursor"
+          style="transform: translateX(0px) scale(1);"
+        >
+          1
+        </span>
+        <li
+          aria-label="previous page button"
+          class="flex flex-wrap truncate box-border items-center justify-center text-default-foreground outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:text-default-300 data-[disabled=true]:pointer-events-none shadow-sm bg-default-100 [&[data-hover=true]:not([data-active=true])]:bg-default-200 active:bg-default-300 min-w-9 w-9 h-9 text-small rounded-medium"
+          data-slot="prev"
+          role="button"
+          tabindex="0"
+        >
+          <svg
+            aria-hidden="true"
+            fill="none"
+            focusable="false"
+            height="1em"
+            role="presentation"
+            viewBox="0 0 24 24"
+            width="1em"
+          >
+            <path
+              d="M15.5 19l-7-7 7-7"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+            />
+          </svg>
+        </li>
+        <li
+          aria-current="true"
+          aria-label="pagination item 1 active"
+          class="tap-highlight-transparent select-none touch-none data-[pressed=true]:scale-[0.97] transition-transform-background flex flex-wrap truncate box-border items-center justify-center text-default-foreground outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:text-default-300 data-[disabled=true]:pointer-events-none shadow-sm bg-default-100 [&[data-hover=true]:not([data-active=true])]:bg-default-200 active:bg-default-300 min-w-9 w-9 h-9 text-small rounded-medium"
+          data-active="true"
+          data-slot="item"
+          role="button"
+          tabindex="0"
+        >
+          1
+        </li>
+        <li
+          aria-label="pagination item 2"
+          class="tap-highlight-transparent select-none touch-none data-[pressed=true]:scale-[0.97] transition-transform-background flex flex-wrap truncate box-border items-center justify-center text-default-foreground outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:text-default-300 data-[disabled=true]:pointer-events-none shadow-sm bg-default-100 [&[data-hover=true]:not([data-active=true])]:bg-default-200 active:bg-default-300 min-w-9 w-9 h-9 text-small rounded-medium"
+          data-slot="item"
+          role="button"
+          tabindex="0"
+        >
+          2
+        </li>
+        <li
+          aria-label="next page button"
+          class="flex flex-wrap truncate box-border items-center justify-center text-default-foreground outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 data-[disabled=true]:text-default-300 data-[disabled=true]:pointer-events-none shadow-sm bg-default-100 [&[data-hover=true]:not([data-active=true])]:bg-default-200 active:bg-default-300 min-w-9 w-9 h-9 text-small rounded-medium"
+          data-slot="next"
+          role="button"
+          tabindex="0"
+        >
+          <svg
+            aria-hidden="true"
+            class="rotate-180"
+            fill="none"
+            focusable="false"
+            height="1em"
+            role="presentation"
+            viewBox="0 0 24 24"
+            width="1em"
+          >
+            <path
+              d="M15.5 19l-7-7 7-7"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+            />
+          </svg>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div
+    class="Toastify"
+  />
+</div>
+`;

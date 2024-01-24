@@ -7,7 +7,7 @@
     "skipLibCheck": true,
     "resolvePackageJsonImports": true,
     "allowJs": true,
-    "types": ["vitest/globals"],
+    "types": ["vitest/globals", "node", "@testing-library/jest-dom"],
 
     /* Bundler mode */
     "moduleResolution": "bundler",

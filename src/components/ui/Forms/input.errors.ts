@@ -1,7 +1,8 @@
+/* eslint-disable no-useless-escape */
 import messages from '../../../api/messages/messages.json';
 
 export const emailErrors = (val: string) => {
-  if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}/.test(val))
+  if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(val))
     return messages.invalidEmail;
 };
 
@@ -19,7 +20,7 @@ export const quizNameErrors = (val: string) => {
 
 export const quizThumbnailErrors = (val: string) => {
   if (
-    !/^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+(?:png|jpg|jpeg|gif|svg)+$/.test(
+    !/(http[s]*:\/\/)([a-z\-_0-9\/.]+)\.([a-z.]{2,3})\/([a-z0-9\-_\/._~:?#\[\]@!$&'()*+,;=%]*)([a-z0-9]+\.)(jpg|jpeg|png)/.test(
       val
     ) &&
     val !== ''

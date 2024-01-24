@@ -43,8 +43,6 @@ const EditQuizForm = () => {
     setValue('category', key);
   };
 
-  console.log();
-
   useEffect(() => {
     setValue('name', quizData?.quiz_name || '');
     setCategory(quizData?.category as Category);
@@ -52,7 +50,12 @@ const EditQuizForm = () => {
   }, [quizData, isFetching]);
 
   return isFetching ? (
-    <Spinner size="lg" color="white" className="absolute left-1/2 bottom-1/2" />
+    <Spinner
+      data-testid="spinner"
+      size="lg"
+      color="white"
+      className="absolute bottom-1/2"
+    />
   ) : (
     <form
       className="flex flex-col gap-4 rounded-xl px-12 py-6 bg-backgroundSecondary mb-4 mt-4 sm:mt-16 w-3/4 justify-center items-center"
@@ -94,7 +97,7 @@ const EditQuizForm = () => {
         className="text-white"
         isDisabled={!!Object.keys(errors).length}
         type="submit"
-        color={!!Object.keys(errors).length ? 'danger' : 'success'}
+        color={Object.keys(errors).length ? 'danger' : 'success'}
         variant="solid"
         isLoading={isPending}
       >
