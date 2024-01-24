@@ -132,6 +132,8 @@ const ActionQuestionModal: React.FC<ActionQuestionModalProps> = ({
     }
   }, [watchedFields, clearErrors, correctAnswer]);
 
+  console.log(questionAnswers?.[0]);
+
   return (
     <Modal
       className="items-center absolute w-full"
