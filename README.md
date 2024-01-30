@@ -56,7 +56,12 @@ Run the following commands: <br/>
 
 ### 🔧In order to launch the project locally initialize project with Vite
 Run the following command:
-`npm run dev` for development environment. <br/>
+`npm run dev` for development environment (front-end). <br/>
+`npm run server` for launching the server. <br/>
+* Note: if hosting locally provide necessary DB connection options in .env file (db port, host etc.).
+For local creation of the DB - use POSTGRESQL and configure accordingly. Use SQL scripts in `./src/api/server/scripts
+/initializeDatabase.sql` to create necessary tables and views.
+
 Application should be hosted in your local network automatically.
 
 
