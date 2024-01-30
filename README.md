@@ -59,16 +59,6 @@ Run the following command:
 `npm run dev` for development environment. <br/>
 Application should be hosted in your local network automatically.
 
-#
-
-### 🎨 Desktop preview - current stage 
-TO BE ADDED
-
-#
-
-### 🎨 Mobile preview - current stage 
-TO BE ADDED
-
 
 
 
