@@ -83,7 +83,7 @@ const QuizCard: React.FC<QuizCardProps> = ({
             </span>
             <span
               //@ts-expect-error needed because of textWrap
-              style={{ textWrap: 'wrap', wordBreak: 'break-all' }}
+              style={{ textWrap: 'wrap', wordBreak: 'break-word' }}
               className="text-white font-medium text-large h-8 min-w-0"
             >
               {quiz_name}

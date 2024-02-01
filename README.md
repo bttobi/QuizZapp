@@ -24,7 +24,7 @@
 <img align="top" padding="5px" width="30px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" /> HTML5 <br/>         
 <img align="top" padding="5px" width="30px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" /> CSS3 <br/>  
 <img align="top" padding="5px" width="30px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" /> React.js <br/>  
-<img align="top" padding="5px" width="30px" src="https://camo.githubusercontent.com/61e102d7c605ff91efedb9d7e47c1c4a07cef59d3e1da202fd74f4772122ca4e/68747470733a2f2f766974656a732e6465762f6c6f676f2e737667" /> Vite <br/><br/>
+<img align="top" padding="5px" width="30px" src="https://vitejs.dev/logo-with-shadow.png" /> Vite <br/><br/>
 <img align="top" padding="5px" width="30px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png" /> TypeScript <br/><br/>
 <img align="top" padding="5px" width="50px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original-wordmark.svg" /> PostgreSQL <br/> <br/>
 <img align="top" padding="5px" width="30px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-plain.svg" /> NodeJS <br/> <br/>

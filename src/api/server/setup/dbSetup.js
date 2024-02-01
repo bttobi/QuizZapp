@@ -17,7 +17,7 @@ const client = new Pool({
   port: DATABASE_PORT,
   password: DATABASE_PASSWORD,
   database: DATABASE_NAME,
-  ssl: true,
+  ssl: false,
   connectionTimeoutMillis: 0,
   acquireConnectionTimeout: 5000,
   pool: {

@@ -232,7 +232,7 @@ exports[`ExplorePage component > matches snapshot 1`] = `
                       </span>
                       <span
                         class="text-white font-medium text-large h-8 min-w-0"
-                        style="text-wrap: wrap; word-break: break-all;"
+                        style="text-wrap: wrap; word-break: break-word;"
                       >
                         Cooking
                       </span>
@@ -274,7 +274,7 @@ exports[`ExplorePage component > matches snapshot 1`] = `
                       </span>
                       <span
                         class="text-white font-medium text-large h-8 min-w-0"
-                        style="text-wrap: wrap; word-break: break-all;"
+                        style="text-wrap: wrap; word-break: break-word;"
                       >
                         My test
                       </span>
