@@ -58,7 +58,7 @@ Run the following commands: <br/>
 Run the following command:
 `npm run dev` for development environment (front-end). <br/>
 `npm run server` for launching the server. <br/>
-* Note: if hosting locally provide necessary DB connection options in .env file (db port, host etc.).
+* Note: if hosting locally provide necessary options in .env file (db port, host etc.).
 For local creation of the DB - use POSTGRESQL and configure accordingly. Use SQL scripts in `./src/api/server/scripts
 /initializeDatabase.sql` to create necessary tables and views.
 
